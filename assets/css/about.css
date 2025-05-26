@@ -6,6 +6,16 @@
     --second-color: #f8f9fe;
 }
 
+::-moz-selection {
+    color: var(--first-color);
+    background: var(--second-color);
+}
+
+::selection {
+    color: var(--first-color);
+    background: var(--second-color);
+}
+
 * {
     margin: 0;
     padding: 0;

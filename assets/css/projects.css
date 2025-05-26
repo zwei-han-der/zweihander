@@ -6,6 +6,16 @@
     --second-color: #0400FF;
 }
 
+::-moz-selection {
+    color: var(--first-color);
+    background: var(--second-color);
+}
+
+::selection {
+    color: var(--first-color);
+    background: var(--second-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -43,6 +53,13 @@ main {
     .content {
         margin: 1rem 0;
         flex-grow: 1;
+    }
+
+    .container {
+        display: flex;
+        height: 60vh;
+        align-items: center;
+        justify-content: center;
     }
 
     .title {
