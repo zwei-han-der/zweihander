@@ -62,3 +62,28 @@ footer {
         color: var(--first-color);
     }
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+        margin-bottom: 140px;
+    }
+
+    main p {
+        font-size: 4rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    footer .end {
+        order: -1;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
