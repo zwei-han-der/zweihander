@@ -10,29 +10,575 @@
     <!-- Loading -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-container">
-            <div class="loading-text">Booting system...</div>
+            <div class="loading-text">BOOTING SYSTEM...</div>
             <div class="loading-percentage">1%</div>
         </div>
     </div>
+
     <!-- Main -->
     <div id="main-content" class="main-content hidden">
         <header class="blog-header">
-            <a href="#" class="header-logo">
-                <img src="gooey-sword-svgrepo-com.svg" alt="Logo Zweihander" class="logo-img">
-            </a>
+            <div class="header-logo" onclick="showHome()">
+                <svg class="logo-img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#000000" d="M159.977 20.63c78.967 153.842 60.076 197.813-140.143 27.124v71.185C48.22 134 72.317 147.707 92.607 160.23c-23.095.797-27.865 26.2 6.827 50.518 34.105 23.908 59.087 13.718 54.964-6.256 75.656 67.92-15.78 85.644-134.564 105.58v62.512c125.702-58.524 142.942-36.168 37.998 123.324h58.27c100.945-258.564 155.41-177.483 125.953 0h33.115c8.185-107.59 37.76-129.26 60.62 0h45.493c-141.196-219.314-28.308-204.87 113.828-140.215V309.8c-239.157-11.635-236.9-101.798 0-133.443V85.813c-72.386 39.545-74.392 15.146-7.327-65.182h-30.396c-141.87 206.317-167.428 173.33-114.166 0H297.82c-26.108 98.248-72.014 80.678-90.902 0h-46.94zm-21.49 55.854c-12.85-.12-17.734 15.212-.45 35.832 27.02 32.236 54.07 12.942 27.088-19.246-9.712-11.586-19.428-16.518-26.637-16.586zM293.226 90.48c2.17.067 4.405.65 6.636 1.866 17.85 9.735-.25 40.7-18.1 30.963-15.646-8.534-3.72-33.294 11.465-32.83zm-52.766 12.207c9.52 0 17.24 7.72 17.24 17.24 0 5.46-2.544 10.315-6.5 13.473l5.82 41.4 49.345-6.94 6.96 49.476-18.51 2.6-4.354-30.967-20.23 2.844c14.463 68.143 18.467 141.156 9.012 201.95-25.853-55.827-42.906-127.008-47.84-196.49l-19.964 2.808 4.355 30.97-18.506 2.602-6.96-49.478 48.19-6.776-5.93-42.144c-5.558-2.86-9.368-8.644-9.368-15.328 0-9.523 7.718-17.24 17.24-17.24zm202.01 23.862c.564.007 1.116.028 1.655.057 8.632.48 13.786 3.577 15.94 6.46 2.156 2.882 2.776 5.828-.133 11.367-2.91 5.538-10.27 12.996-23.912 19.81-13.666 6.827-25.43 9.032-34.06 8.553-8.63-.48-13.785-3.578-15.94-6.46-2.156-2.884-2.775-5.834.134-11.372 2.91-5.538 10.27-12.995 23.91-19.807 12.81-6.4 23.952-8.736 32.407-8.61zM182.167 293.11c.517.002 1.022.02 1.518.05 4.754.292 8.485 1.81 10.763 3.774 3.038 2.62 4.42 5.677 3.496 10.87-.923 5.194-4.94 12.75-14.824 21.057-19.795 16.637-35.19 14.16-40.83 8.855-2.822-2.653-4.21-6.063-3.21-11.46 1-5.395 4.96-12.846 14.28-20.775 10.906-9.276 21.052-12.416 28.806-12.37zm186.98 47.52c-25.603.182-26.42 26.004 20.002 60.106 72.344 53.145 114.972 20.073 42.516-33.146-25.997-19.098-48.157-27.064-62.52-26.96z"/>
+                </svg>
+            </div>
             <div class="header-nav">
                 <div class="header-nav-content">
-                    <h1 class="blog-title">Zweihander</h1>
+                    <h1 class="blog-title" onclick="showHome()">Zweihander</h1>
                     <nav class="blog-nav">
-                        <a href="#" class="nav-link active">Home</a>
-                        <a href="#" class="nav-link">Sobre</a>
-                        <a href="#" class="nav-link">Login</a>
+                        <a class="nav-link active" onclick="showHome()">Home</a>
+                        <a class="nav-link" onclick="showAbout()">Sobre</a>
+                        <a class="nav-link" onclick="showLogin()" id="login-nav">Login</a>
                     </nav>
                 </div>
                 <hr class="header-divider">
             </div>
         </header>
+
+        <!-- Home Section -->
+        <section id="home-section" class="posts-container">
+            <div id="posts-grid" class="posts-grid">
+                <div class="no-posts">
+                    <p>CARREGANDO POSTS...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="hidden">
+            <div style="border: 2px solid var(--BorderColor); padding: 2rem; background: white;">
+                <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">SOBRE O ZWEIHANDER</h2>
+                <p style="line-height: 1.6; margin-bottom: 1rem;">
+                    Blog pessoal focado em tecnologia, programação e reflexões sobre o mundo digital.
+                </p>
+                <p style="line-height: 1.6;">
+                    Um espaço para compartilhar conhecimento e experiências na jornada do desenvolvimento.
+                </p>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login-section" class="hidden">
+            <div class="login-container">
+                <form id="login-form" class="login-form">
+                    <h2 class="form-title">ACESSO ADMINISTRATIVO</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="email">EMAIL:</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">SENHA:</label>
+                        <input type="password" id="password" class="form-input" required>
+                    </div>
+                    <button type="submit" class="form-button">ENTRAR</button>
+                    <div id="login-message"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Admin Panel -->
+        <section id="admin-section" class="hidden admin-panel">
+            <div class="admin-header">
+                <h2 class="admin-title">PAINEL ADMINISTRATIVO</h2>
+                <button class="logout-btn" onclick="logout()">SAIR</button>
+            </div>
+
+            <form id="new-post-form" class="new-post-form">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">NOVO POST</h3>
+                <div class="form-group">
+                    <label class="form-label" for="post-title">TÍTULO:</label>
+                    <input type="text" id="post-title" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="post-content">CONTEÚDO:</label>
+                    <textarea id="post-content" class="form-textarea" required placeholder="Escreva seu post aqui..."></textarea>
+                </div>
+                <button type="submit" class="form-button">PUBLICAR POST</button>
+                <div id="post-message"></div>
+            </form>
+
+            <div id="admin-posts">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">POSTS PUBLICADOS</h3>
+                <div id="admin-posts-list"></div>
+            </div>
+        </section>
     </div>
-    <script src="./js/script.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        const SUPABASE_URL = 'https://sahqzuwrkuhiftvtwney.supabase.co';
+        const SUPABASE_ANON_KEY = process.env.SUPABASE_KEY;
+
+        const AppState = {
+            currentSection: 'home',
+            isAuthenticated: false,
+            posts: [],
+            user: null
+        };
+
+        class SupabaseClient {
+            constructor(url, key) {
+                this.url = url;
+                this.key = key;
+                this.authToken = localStorage.getItem('sb-auth-token');
+            }
+
+            async request(endpoint, options = {}) {
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'apikey': this.key,
+                    'Authorization': `Bearer ${this.key}`
+                };
+
+                if (this.authToken) {
+                    headers['Authorization'] = `Bearer ${this.authToken}`;
+                }
+
+                const response = await fetch(`${this.url}/rest/v1${endpoint}`, {
+                    headers,
+                    ...options
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                return response.json();
+            }
+
+            async signIn(email, password) {
+                const response = await fetch(`${this.url}/auth/v1/token?grant_type=password`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': this.key
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Credenciais inválidas');
+                }
+
+                const data = await response.json();
+                this.authToken = data.access_token;
+                localStorage.setItem('sb-auth-token', this.authToken);
+                return data;
+            }
+
+            async signOut() {
+                this.authToken = null;
+                localStorage.removeItem('sb-auth-token');
+            }
+
+            async from(table) {
+                return {
+                    select: (columns = '*') => ({
+                        order: (column, options = {}) => ({
+                            execute: () => this.request(`/${table}?select=${columns}&order=${column}.${options.ascending ? 'asc' : 'desc'}`)
+                        }),
+                        execute: () => this.request(`/${table}?select=${columns}`)
+                    }),
+                    insert: (data) => ({
+                        execute: () => this.request(`/${table}`, {
+                            method: 'POST',
+                            body: JSON.stringify(data)
+                        })
+                    }),
+                    delete: () => ({
+                        eq: (column, value) => ({
+                            execute: () => this.request(`/${table}?${column}=eq.${value}`, {
+                                method: 'DELETE'
+                            })
+                        })
+                    })
+                };
+            }
+        }
+
+        const supabase = SUPABASE_URL !== 'https://sahqzuwrkuhiftvtwney.supabase.co' ? new SupabaseClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+        const LoadingSystem = {
+            screen: null,
+            mainContent: null,
+            loadingText: null,
+            loadingPercentage: null,
+            currentPercent: 1,
+
+            init() {
+                this.screen = document.getElementById('loading-screen');
+                this.mainContent = document.getElementById('main-content');
+                this.loadingText = document.querySelector('.loading-text');
+                this.loadingPercentage = document.querySelector('.loading-percentage');
+            },
+
+            getLoadingText(percent) {
+                if (percent < 20) return 'BOOTING SYSTEM...';
+                if (percent >= 20 && percent < 40) return 'LOADING NEURAL CORE...';
+                if (percent >= 40 && percent < 60) return 'ESTABLISHING CONNECTION...';
+                if (percent >= 60 && percent < 80) return 'SYNCHRONIZING DATA...';
+                if (percent >= 80 && percent < 100) return 'FINALIZING PROTOCOL...';
+                if (percent === 100) return 'SYSTEM ONLINE';
+            },
+
+            async simulateLoading() {
+                this.loadingText.textContent = this.getLoadingText(this.currentPercent);
+                this.loadingPercentage.textContent = this.currentPercent + '%';
+                
+                if (this.currentPercent < 100) {
+                    this.currentPercent++;
+                    setTimeout(() => this.simulateLoading(), 30);
+                } else {
+                    await this.loadInitialData();
+                    setTimeout(() => this.showMainContent(), 500);
+                }
+            },
+
+            async loadInitialData() {
+                try {
+                    await PostManager.loadPosts();
+                } catch (error) {
+                    console.error('Erro ao carregar dados iniciais:', error);
+                }
+            },
+
+            showMainContent() {
+                this.screen.classList.add('fade-out');
+                this.mainContent.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    this.screen.style.display = 'none';
+                }, 800);
+            },
+
+            start() {
+                this.simulateLoading();
+            }
+        };
+
+        const PostManager = {
+            async loadPosts() {
+                try {
+                    if (!supabase) {
+                        AppState.posts = [
+                            {
+                                id: 1,
+                                title: "Bem-vindo ao Zweihander Blog",
+                                content: "Este é o primeiro post do blog. Configure o Supabase para funcionalidade completa.",
+                                created_at: new Date().toISOString(),
+                                excerpt: "Post de demonstração do sistema..."
+                            }
+                        ];
+                    } else {
+                        const { data, error } = await supabase
+                            .from('posts')
+                            .select('*')
+                            .order('created_at', { ascending: false });
+
+                        if (error) throw error;
+                        AppState.posts = data || [];
+                    }
+                    
+                    this.renderPosts();
+                } catch (error) {
+                    console.error('Erro ao carregar posts:', error);
+                    this.renderError();
+                }
+            },
+
+            renderPosts() {
+                const postsGrid = document.getElementById('posts-grid');
+                
+                if (AppState.posts.length === 0) {
+                    postsGrid.innerHTML = '<div class="no-posts"><p>NENHUM POST ENCONTRADO</p></div>';
+                    return;
+                }
+
+                postsGrid.innerHTML = AppState.posts.map(post => `
+                    <article class="post-card" onclick="expandPost('${post.id}')">
+                        <h3 class="post-title">${this.escapeHtml(post.title)}</h3>
+                        <div class="post-meta">
+                            ${new Date(post.created_at).toLocaleDateString('pt-BR')} • ${new Date(post.created_at).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                        </div>
+                        <p class="post-excerpt">${this.escapeHtml(post.excerpt || post.content.substring(0, 200) + '...')}</p>
+                    </article>
+                `).join('');
+            },
+
+            renderError() {
+                const postsGrid = document.getElementById('posts-grid');
+                postsGrid.innerHTML = '<div class="no-posts"><p>ERRO AO CARREGAR POSTS</p></div>';
+            },
+
+            async createPost(title, content) {
+                try {
+                    if (!supabase) {
+                        throw new Error('Supabase não configurado');
+                    }
+
+                    const { data, error } = await supabase
+                        .from('posts')
+                        .insert([{
+                            title,
+                            content,
+                            excerpt: content.substring(0, 200) + '...',
+                            created_at: new Date().toISOString()
+                        }]);
+
+                    if (error) throw error;
+
+                    await this.loadPosts();
+                    return { success: true };
+                } catch (error) {
+                    console.error('Erro ao criar post:', error);
+                    return { success: false, error: error.message };
+                }
+            },
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        };
+
+        const AuthManager = {
+            async login(email, password) {
+                try {
+                    const data = await supabase.signIn(email, password);
+                    AppState.isAuthenticated = true;
+                    AppState.user = data.user;
+                    return { success: true };
+                } catch (error) {
+                    return { success: false, error: error.message };
+                }
+            },
+
+            async logout() {
+                try {
+                    if (supabase) {
+                        await supabase.signOut();
+                    }
+                    AppState.isAuthenticated = false;
+                    AppState.user = null;
+                    return { success: true };
+                } catch (error) {
+                    return { success: false, error: error.message };
+                }
+            }
+        };
+
+        const NavigationManager = {
+            showSection(sectionId) {
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                document.getElementById(sectionId).classList.remove('hidden');
+                
+                AppState.currentSection = sectionId.replace('-section', '');
+                
+                this.updateNavigation();
+            },
+
+            updateNavigation() {
+                const loginNav = document.getElementById('login-nav');
+                
+                if (AppState.isAuthenticated) {
+                    loginNav.textContent = 'Admin';
+                    loginNav.onclick = () => this.showSection('admin-section');
+                } else {
+                    loginNav.textContent = 'Login';
+                    loginNav.onclick = () => this.showSection('login-section');
+                }
+
+                const activeSection = AppState.currentSection;
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    const linkText = link.textContent.toLowerCase();
+                    if ((linkText === 'home' && activeSection === 'home') ||
+                        (linkText === 'sobre' && activeSection === 'about') ||
+                        (linkText === 'login' && activeSection === 'login') ||
+                        (linkText === 'admin' && activeSection === 'admin')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        };
+
+        function showHome() {
+            NavigationManager.showSection('home-section');
+        }
+
+        function showAbout() {
+            NavigationManager.showSection('about-section');
+        }
+
+        function showLogin() {
+            if (AppState.isAuthenticated) {
+                NavigationManager.showSection('admin-section');
+                AdminPanel.loadAdminPosts();
+            } else {
+                NavigationManager.showSection('login-section');
+            }
+        }
+
+        async function logout() {
+            const result = await AuthManager.logout();
+            if (result.success) {
+                NavigationManager.showSection('home-section');
+                NavigationManager.updateNavigation();
+                showMessage('login-message', 'Logout realizado com sucesso!', 'success');
+            }
+        }
+
+        function expandPost(postId) {
+            const post = AppState.posts.find(p => p.id == postId);
+            if (post) {
+                alert(`${post.title}\n\n${post.content}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const submitBtn = loginForm.querySelector('.form-button');
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'ENTRANDO...';
+                    
+                    const result = await AuthManager.login(email, password);
+                    
+                    if (result.success) {
+                        showMessage('login-message', 'Login realizado com sucesso!', 'success');
+                        setTimeout(() => {
+                            NavigationManager.showSection('admin-section');
+                            NavigationManager.updateNavigation();
+                            AdminPanel.loadAdminPosts();
+                        }, 1000);
+                    } else {
+                        showMessage('login-message', result.error || 'Erro ao fazer login', 'error');
+                    }
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'ENTRAR';
+                });
+            }
+
+            const newPostForm = document.getElementById('new-post-form');
+            if (newPostForm) {
+                newPostForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const title = document.getElementById('post-title').value;
+                    const content = document.getElementById('post-content').value;
+                    const submitBtn = newPostForm.querySelector('.form-button');
+                    
+                    if (!title.trim() || !content.trim()) {
+                        showMessage('post-message', 'Título e conteúdo são obrigatórios', 'error');
+                        return;
+                    }
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'PUBLICANDO...';
+                    
+                    const result = await PostManager.createPost(title.trim(), content.trim());
+                    
+                    if (result.success) {
+                        showMessage('post-message', 'Post publicado com sucesso!', 'success');
+                        document.getElementById('post-title').value = '';
+                        document.getElementById('post-content').value = '';
+                        AdminPanel.loadAdminPosts();
+                    } else {
+                        showMessage('post-message', result.error || 'Erro ao publicar post', 'error');
+                    }
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'PUBLICAR POST';
+                });
+            }
+        });
+
+        const AdminPanel = {
+            loadAdminPosts() {
+                const adminPostsList = document.getElementById('admin-posts-list');
+                
+                if (AppState.posts.length === 0) {
+                    adminPostsList.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">Nenhum post encontrado</p>';
+                    return;
+                }
+
+                adminPostsList.innerHTML = AppState.posts.map(post => `
+                    <div class="admin-post-item" style="border: 1px solid var(--BorderColor); padding: 1rem; margin-bottom: 1rem; background: white;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <h4 style="font-weight: 700; font-size: 1.1rem;">${PostManager.escapeHtml(post.title)}</h4>
+                            <button onclick="deletePost('${post.id}')" style="background: var(--ErrorColor); color: white; border: none; padding: 0.3rem 0.8rem; font-family: var(--JetBrains); font-size: 0.8rem; cursor: pointer;">DELETAR</button>
+                        </div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                            ${new Date(post.created_at).toLocaleDateString('pt-BR')} • ${new Date(post.created_at).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                        </div>
+                        <p style="color: var(--PrimaryColor); line-height: 1.4;">${PostManager.escapeHtml(post.content.substring(0, 150))}${post.content.length > 150 ? '...' : ''}</p>
+                    </div>
+                `).join('');
+            }
+        };
+
+        async function deletePost(postId) {
+            if (!confirm('Tem certeza que deseja deletar este post?')) {
+                return;
+            }
+
+            try {
+                if (!supabase) {
+                    AppState.posts = AppState.posts.filter(p => p.id != postId);
+                } else {
+                    const { error } = await supabase
+                        .from('posts')
+                        .delete()
+                        .eq('id', postId);
+
+                    if (error) throw error;
+                    await PostManager.loadPosts();
+                }
+                
+                AdminPanel.loadAdminPosts();
+                showMessage('post-message', 'Post deletado com sucesso!', 'success');
+            } catch (error) {
+                console.error('Erro ao deletar post:', error);
+                showMessage('post-message', 'Erro ao deletar post', 'error');
+            }
+        }
+
+        function showMessage(elementId, message, type) {
+            const messageElement = document.getElementById(elementId);
+            messageElement.textContent = message;
+            messageElement.className = type === 'error' ? 'error-message' : 'success-message';
+            
+            setTimeout(() => {
+                messageElement.textContent = '';
+                messageElement.className = '';
+            }, 5000);
+        }
+
+        function initializeApp() {
+            LoadingSystem.init();
+            LoadingSystem.start();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeApp);
+        } else {
+            initializeApp();
+        }
+    </script>
 </body>
 </html>
