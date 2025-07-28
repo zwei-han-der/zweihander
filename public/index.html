@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zweihander's Blog</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-text">Booting system...</div>
+            <div class="loading-percentage">1%</div>
+        </div>
+    </div>
+    <!-- Main -->
+    <div id="app" class="hidden">
+        <!-- Header -->
+        <header class="blog-header">
+            <a href="#" class="header-logo" aria-label="Home">
+                <img src="./assets/images/gooey-sword-svgrepo-com.svg" alt="Logo Zweihander" class="logo-img">
+            </a>
+            <div class="header-nav">
+                <div class="header-nav-content">
+                    <h1 class="blog-title">Zweihander</h1>
+                    <nav class="blog-nav" aria-label="Navegação principal">
+                        <a href="#" class="nav-link active" data-page="home">Home</a>
+                        <a href="#" class="nav-link" data-page="about">Sobre</a>
+                        <a href="#" class="nav-link" data-page="archive">Arquivo</a>
+                        <a href="#" class="nav-link" data-page="login" id="auth-link">Login</a>
+                    </nav>
+                </div>
+                <hr class="header-divider">
+            </div>
+        </header>
+        <!-- Content -->
+        <main id="content" class="blog-content"></main>
+        <!-- Footer -->
+         <footer class="blog-footer">
+            <hr class="footer-divider">
+            <p>© <span id="current-year"></span> Zweihander. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./js/db.js" type="module"></script>
+    <script src="./js/auth.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html> 
