@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zweihander's Blog</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Loading -->
@@ -16,36 +15,24 @@
         </div>
     </div>
     <!-- Main -->
-    <div id="app" class="hidden">
-        <!-- Header -->
+    <div id="main-content" class="main-content hidden">
         <header class="blog-header">
-            <a href="#" class="header-logo" aria-label="Home">
-                <img src="./assets/images/gooey-sword-svgrepo-com.svg" alt="Logo Zweihander" class="logo-img">
+            <a href="#" class="header-logo">
+                <img src="gooey-sword-svgrepo-com.svg" alt="Logo Zweihander" class="logo-img">
             </a>
             <div class="header-nav">
                 <div class="header-nav-content">
                     <h1 class="blog-title">Zweihander</h1>
-                    <nav class="blog-nav" aria-label="Navegação principal">
-                        <a href="#" class="nav-link active" data-page="home">Home</a>
-                        <a href="#" class="nav-link" data-page="about">Sobre</a>
-                        <a href="#" class="nav-link" data-page="archive">Arquivo</a>
-                        <a href="#" class="nav-link" data-page="login" id="auth-link">Login</a>
+                    <nav class="blog-nav">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#" class="nav-link">Sobre</a>
+                        <a href="#" class="nav-link">Login</a>
                     </nav>
                 </div>
                 <hr class="header-divider">
             </div>
         </header>
-        <!-- Content -->
-        <main id="content" class="blog-content"></main>
-        <!-- Footer -->
-         <footer class="blog-footer">
-            <hr class="footer-divider">
-            <p>© <span id="current-year"></span> Zweihander. Todos os direitos reservados.</p>
-        </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="./js/db.js" type="module"></script>
-    <script src="./js/auth.js" type="module"></script>
-    <script src="./js/app.js" type="module"></script>
+    <script src="./js/script.js"></script>
 </body>
-</html> 
+</html>
