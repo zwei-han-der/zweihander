@@ -1,7 +1,7 @@
 const CONFIG = {
     SUPABASE: {
         URL: 'https://sahqzuwrkuhiftvtwney.supabase.co',
-        ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhaHF6dXdya3VoaWZ0dnR3bmV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM2NTA1ODQsImV4cCI6MjA2OTIyNjU4NH0.dYyzdCMGDXGsZraEcakdgKoEZgo7ZRLGt0IHp_et-m4'
+        ANON_KEY: 'sb_publishable_wfS_DachPcFgYCOt-hQqDA_JUDKh-KZ'
     },
     
     BLOG: {
