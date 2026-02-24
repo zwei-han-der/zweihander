@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-font: "IBM Plex Sans";
+  --secondary-font: "Inter";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--secondary-font);
+  color: #fafafa;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(at 81% 13%, var(--color01) 0px, transparent 50%),
+    radial-gradient(at 16% 91%, var(--color02) 0px, transparent 50%),
+    radial-gradient(at 24% 16%, var(--color03) 0px, transparent 50%),
+    radial-gradient(at 66% 4%, var(--color04) 0px, transparent 50%),
+    var(--color01);
+}
+
+#root {
+  width: 100%;
+}
