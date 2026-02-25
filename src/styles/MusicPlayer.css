@@ -82,6 +82,16 @@ i.fas.fa-backward {
   font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
+
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-title.is-overflowing:hover {
+  animation: marquee 5s linear infinite;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .track-album {
@@ -94,7 +104,7 @@ i.fas.fa-backward {
   text-overflow: ellipsis;
 }
 
-.track-album:hover {
+.track-album.is-overflowing:hover {
   animation: marquee 5s linear infinite;
   overflow: visible;
   text-overflow: clip;

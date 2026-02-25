@@ -9,11 +9,39 @@ function MusicPlayer() {
   const [totalDuration, setTotalDuration] = useState("0:00");
   const [seekValue, setSeekValue] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isTitleOverflowing, setIsTitleOverflowing] = useState(false);
+  const [isAlbumOverflowing, setIsAlbumOverflowing] = useState(false);
 
   const audioRef = useRef(null);
   const seekSliderRef = useRef(null);
+  const trackTitleRef = useRef(null);
+  const trackAlbumRef = useRef(null);
 
   const currentTrack = trackList[trackIndex];
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = 0.3;
+    }
+  }, []);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (trackTitleRef.current) {
+        const isTitleOverflow = trackTitleRef.current.scrollWidth > trackTitleRef.current.clientWidth;
+        setIsTitleOverflowing(isTitleOverflow);
+      }
+      if (trackAlbumRef.current) {
+        const isAlbumOverflow = trackAlbumRef.current.scrollWidth > trackAlbumRef.current.clientWidth;
+        setIsAlbumOverflowing(isAlbumOverflow);
+      }
+    };
+
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [trackIndex]);
 
   const formatTime = (seconds) => {
     if (isNaN(seconds)) return "0:00";
@@ -114,8 +142,8 @@ function MusicPlayer() {
       <div className="track-info">
         <img src={currentTrack.cover} alt="cover" className="track-cover" />
         <div className="track-meta">
-          <div className="track-title">{currentTrack.name}</div>
-          <div className="track-album">
+          <div className={`track-title ${isTitleOverflowing ? "is-overflowing" : ""}`} ref={trackTitleRef}>{currentTrack.name}</div>
+          <div className={`track-album ${isAlbumOverflowing ? "is-overflowing" : ""}`} ref={trackAlbumRef}>
             {currentTrack.artist} • {currentTrack.album}
           </div>
         </div>
