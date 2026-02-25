@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import { themes } from "./data/themes";
+import Home from "./pages/Home";
 import Changelog from "./pages/Changelog";
 import NotFound from "./pages/NotFound";
 import Videos from "./pages/Videos";
+import Bookmarks from "./pages/Bookmarks";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/changelog" element={<Changelog />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
