@@ -1,5 +1,5 @@
-import diamanteslagrimaserostosparaesquecer from "../assets/diamantes-lagrimas-e-rostos-para-esquecer.jpg";
-import abaixodoradar from "../assets/abaixo-do-radar.jpg";
+import diamanteslagrimaserostosparaesquecer from "../assets/images/diamantes-lagrimas-e-rostos-para-esquecer.jpg";
+import abaixodoradar from "../assets/images/abaixo-do-radar.jpg";
 
 export const trackList = [
   {
