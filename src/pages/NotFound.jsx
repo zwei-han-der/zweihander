@@ -1,7 +1,13 @@
 import Standalone from "../layouts/Standalone";
 
 function NotFound() {
-  return <Standalone>ops... talvez essa página não exista</Standalone>;
+  return (
+    <Standalone>
+      <div className="main-content">
+        <p className="p-content">Ops... Esta página talvez não exista.</p>
+      </div>
+    </Standalone>
+  )
 }
 
 export default NotFound;
