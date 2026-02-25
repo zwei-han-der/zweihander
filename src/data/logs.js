@@ -1,5 +1,11 @@
 export const logs = [
     {
+        title: "boookkkkmmmmaaarrrkkkkssss",
+        version: "changelog #5",
+        date: "25/02/2026",
+        description: "Adicionada a aba de bookmarks. Ainda não está 100% completa, mas tá lá."
+    },
+    {
         title: "marquee é legal demais",
         version: "changelog #4",
         date: "25/02/2026",
