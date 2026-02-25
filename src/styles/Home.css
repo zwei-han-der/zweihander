@@ -1,0 +1,14 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-content a {
+    text-decoration: underline;
+    color: #fafafa;
+}
+
+.p-content {
+    text-align: center;
+}
