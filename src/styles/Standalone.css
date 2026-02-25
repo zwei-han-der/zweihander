@@ -2,7 +2,7 @@ main.standalone {
   width: min(1200px, 90vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(260px, 25%) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 27.5%) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -15,7 +15,6 @@ main.standalone {
 
 .standalone-main > .content {
   width: 100%;
-  max-width: 900px;
   height: 462px;
   padding: 1.5rem;
   background: rgba(24, 24, 24, 0.2);

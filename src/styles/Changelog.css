@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid #fafafa40;
+  border-bottom: 1px solid #fafafa50;
   line-height: 1.5;
 }
 
@@ -33,6 +33,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.header-title h2 {
+  font-weight: 500;
 }
 
 .header-title.is-overflowing:hover {
