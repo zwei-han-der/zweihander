@@ -18,16 +18,16 @@ import thumb_23_02_2026_2 from "../assets/videos/thumbnails/23-02-2026-2.jpg";
 
 export const videos = [
     {
-        title: "hustle",
-        date: "23/02/2026",
-        video: video_23_02_2026_2,
-        poster: thumb_23_02_2026_2
-    },
-    {
         title: "midrangemaster 4.0",
         date: "23/02/2026",
         video: video_23_02_2026_1,
         poster: thumb_23_02_2026_1
+    },
+    {
+        title: "hustle",
+        date: "23/02/2026",
+        video: video_23_02_2026_2,
+        poster: thumb_23_02_2026_2
     },
     {
         title: "midrangemaster 3.0",

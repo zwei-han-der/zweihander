@@ -57,7 +57,7 @@ function Videos() {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            <video className="video-modal-player" controls autoPlay>
+            <video className="video-modal-player" controls autoPlay loop>
               <source src={videos[selectedVideo].video} type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
             </video>
