@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/changelog" element={<Changelog />} /> */}
+        <Route path="/changelog" element={<Changelog />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
