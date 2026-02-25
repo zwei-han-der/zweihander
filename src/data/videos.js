@@ -31,9 +31,15 @@ export const videos = [
     },
     {
         title: "midrangemaster 3.0",
-        date: "10/02/2026",
+        date: "20/02/2026",
         video: video_20_02_2026_1,
         poster: thumb_20_02_2026_1
+    },
+    {
+        title: "midrangemaster 2.0",
+        date: "09/02/2026",
+        video: video_09_02_2026_1,
+        poster: thumb_09_02_2026_1
     },
     {
         title: "tava quente esse dia",
@@ -42,27 +48,21 @@ export const videos = [
         poster: thumb_13_10_2025_2
     },
     {
-        title: "midrangemaster 2.0",
+        title: "midrangemaster 1.0",
         date: "13/10/2025",
         video: video_13_10_2025_1,
         poster: thumb_13_10_2025_1
-    },
-    {
-        title: "midrangemaster 1.0",
-        date: "09/02/2026",
-        video: video_09_02_2026_1,
-        poster: thumb_09_02_2026_1
-    },
-    {
-        title: "pump fake",
-        date: "03/11/2025",
-        video: video_03_11_2025_1,
-        poster: thumb_03_11_2025_1
     },
     {
         title: "primeira bola de 3 no dunk",
         date: "01/12/2025",
         video: video_01_12_2025_1,
         poster: thumb_01_12_2025_1
+    },
+    {
+        title: "pump fake",
+        date: "03/11/2025",
+        video: video_03_11_2025_1,
+        poster: thumb_03_11_2025_1
     },
 ]
