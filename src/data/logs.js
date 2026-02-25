@@ -1,5 +1,11 @@
 export const logs = [
     {
+        title: "marquee é legal demais",
+        version: "changelog #4",
+        date: "25/02/2026",
+        description: "Gostei tanto que mudei a animação de marquee no overflow do texto para um utilitário próprio. Agora além de ter a animação no player de música tem nos títulos dos logs, preparada para ser adicionada em mais lugares no futuro."
+    },
+    {
         title: "anotações são a base da recordação",
         version: "changelog #3",
         date: "25/02/2026",
