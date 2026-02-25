@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { themes } from "./data/themes";
 import Changelog from "./pages/Changelog";
+import NotFound from "./pages/NotFound";
+import Videos from "./pages/Videos";
 
 function App() {
   useEffect(() => {
@@ -17,7 +19,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/changelog" element={<Changelog />} />
+        {/* <Route path="/changelog" element={<Changelog />} /> */}
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
