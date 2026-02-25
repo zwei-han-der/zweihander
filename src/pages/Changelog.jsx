@@ -12,6 +12,7 @@ function Changelog() {
               <div className="header">
                 <span className="header-title">
                   <h2>{log.title}</h2>
+                  <span className="header-version">{log.version}</span>
                 </span>
                 <span className="header-date">
                   <p>{log.date}</p>

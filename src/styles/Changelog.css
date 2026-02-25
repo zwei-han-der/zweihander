@@ -14,8 +14,26 @@
   line-height: 1.5;
 }
 
+.post > .description {
+  font-family: var(--secondary-font);
+
+  padding: 0.5rem;
+}
+
 .header-title {
   font-weight: 600;
   font-family: var(--primary-font);
   text-transform: uppercase;
+
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.header-version {
+  color: #fafafa99;
+}
+
+.header-date {
+  color: #fafafa99;
 }
