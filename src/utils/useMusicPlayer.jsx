@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { trackList } from "../data/tracks";
+import useTextOverflow from "./useTextOverflow";
 
 function useMusicPlayer() {
   const [trackIndex, setTrackIndex] = useState(0);
@@ -8,8 +9,6 @@ function useMusicPlayer() {
   const [totalDuration, setTotalDuration] = useState("0:00");
   const [seekValue, setSeekValue] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [isTitleOverflowing, setIsTitleOverflowing] = useState(false);
-  const [isAlbumOverflowing, setIsAlbumOverflowing] = useState(false);
 
   const audioRef = useRef(null);
   const seekSliderRef = useRef(null);
@@ -25,24 +24,13 @@ function useMusicPlayer() {
     }
   }, []);
 
-  useEffect(() => {
-    const checkOverflow = () => {
-      if (trackTitleRef.current) {
-        const isTitleOverflow =
-          trackTitleRef.current.scrollWidth > trackTitleRef.current.clientWidth;
-        setIsTitleOverflowing(isTitleOverflow);
-      }
-      if (trackAlbumRef.current) {
-        const isAlbumOverflow =
-          trackAlbumRef.current.scrollWidth > trackAlbumRef.current.clientWidth;
-        setIsAlbumOverflowing(isAlbumOverflow);
-      }
-    };
-
-    checkOverflow();
-    window.addEventListener("resize", checkOverflow);
-    return () => window.removeEventListener("resize", checkOverflow);
-  }, [trackIndex]);
+  const overflowStates = useTextOverflow(
+    [
+      { key: "title", ref: trackTitleRef},
+      { key: "album", ref: trackAlbumRef},
+      
+    ]
+  )
 
   const formatTime = (seconds) => {
     if (isNaN(seconds)) return "0:00";
@@ -141,8 +129,8 @@ function useMusicPlayer() {
   return {
     currentTrack,
     isPlaying,
-    isTitleOverflowing,
-    isAlbumOverflowing,
+    isTitleOverflowing: overflowStates.title,
+    isAlbumOverflowing: overflowStates.album,
     trackTitleRef,
     trackAlbumRef,
     currentTime,

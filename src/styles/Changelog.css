@@ -28,12 +28,34 @@
   display: flex;
   align-items: baseline;
   gap: 5px;
+  
+  display: inline-flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-title.is-overflowing:hover {
+  animation: marquee 5s linear infinite;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .header-version {
+  text-overflow: ellipsis;
   color: #fafafa99;
 }
 
 .header-date {
+  padding-left: 0.5rem;
   color: #fafafa99;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
