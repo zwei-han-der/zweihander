@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/zweihander">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/changelog" element={<Changelog />} />
