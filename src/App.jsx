@@ -6,6 +6,7 @@ import Changelog from "./pages/Changelog";
 import NotFound from "./pages/NotFound";
 import Videos from "./pages/Videos";
 import Bookmarks from "./pages/Bookmarks";
+import Profile from "./pages/Profile";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/changelog" element={<Changelog />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

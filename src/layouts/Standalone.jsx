@@ -1,5 +1,5 @@
 import TOC from "../components/TOC";
-import "../styles/Standalone.css";
+import "../styles/Standalone.layout.css";
 
 function Standalone({ children }) {
   return (
