@@ -1,24 +1,11 @@
-import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+import { useState } from "react";
 import Standalone from "../layouts/Standalone";
+import Modal from "../components/Modal";
 import { videos } from "../data/videos";
 import "../styles/Videos.css";
 
 function Videos() {
   const [selectedVideo, setSelectedVideo] = useState(null);
-
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === "Escape") {
-        setSelectedVideo(null);
-      }
-    };
-
-    if (selectedVideo !== null) {
-      document.addEventListener("keydown", handleEscape);
-      return () => document.removeEventListener("keydown", handleEscape);
-    }
-  }, [selectedVideo]);
 
   const openModal = (index) => {
     setSelectedVideo(index);
@@ -33,14 +20,20 @@ function Videos() {
       <Standalone>
         <div className="video-grid">
           {videos.map((video, index) => (
-            <div key={index} className="video-card" onClick={() => openModal(index)}>
-              <img 
-                src={video.poster} 
+            <div
+              key={index}
+              className="video-card"
+              onClick={() => openModal(index)}
+            >
+              <img
+                src={video.poster}
                 alt={video.title || `Vídeo ${index + 1}`}
                 className="video-thumbnail"
               />
               <div className="video-info">
-                <h3 className="video-title">{video.title || `Vídeo ${index + 1}`}</h3>
+                <h3 className="video-title">
+                  {video.title || `Vídeo ${index + 1}`}
+                </h3>
                 <span className="video-date">{video.date}</span>
               </div>
             </div>
@@ -48,23 +41,20 @@ function Videos() {
         </div>
       </Standalone>
 
-      {selectedVideo !== null && createPortal(
-        <div className="video-modal-overlay" onClick={closeModal}>
-          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="video-modal-close" onClick={closeModal}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-            <video className="video-modal-player" controls autoPlay loop>
+      <Modal isOpen={selectedVideo !== null} onClose={closeModal}>
+        {selectedVideo !== null && (
+          <>
+            <video className="video-player" controls autoPlay loop muted>
               <source src={videos[selectedVideo].video} type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
             </video>
-          </div>
-        </div>,
-        document.body
-      )}
+            <div className="video-modal-info">
+              <h3 className="video-title">{videos[selectedVideo].title}</h3>
+              <span className="video-date">{videos[selectedVideo].date}</span>
+            </div>
+          </>
+        )}
+      </Modal>
     </>
   );
 }
