@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/TOC.css";
 
 function TOC() {
@@ -6,7 +6,7 @@ function TOC() {
     <div className="toc">
       <h2>Páginas</h2>
       <div className="list">
-        <Link to="/" className="list-item">
+        <NavLink to="/" className="list-item">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +19,8 @@ function TOC() {
             </svg>
           </span>
           <p>HOME</p>
-        </Link>
-        <Link to="/videos" className="list-item">
+        </NavLink>
+        <NavLink to="/videos" className="list-item" activeClassName="active">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +33,8 @@ function TOC() {
             </svg>
           </span>
           <p>Vídeos</p>
-        </Link>
-        <Link to="/bookmarks" className="list-item">
+        </NavLink>
+        <NavLink to="/bookmarks" className="list-item">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +47,8 @@ function TOC() {
             </svg>
           </span>
           <p>Bookmarks</p>
-        </Link>
-        <Link to="/changelog" className="list-item">
+        </NavLink>
+        <NavLink to="/changelog" className="list-item">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ function TOC() {
             </svg>
           </span>
           <p>CHANGELOG</p>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
