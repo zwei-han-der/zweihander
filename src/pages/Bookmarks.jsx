@@ -59,34 +59,6 @@ function Bookmarks() {
             </li>
           </ul>
         </div>
-        <div className="bookmarks-topic">
-          <div className="bookmarks-topic-header">
-            <h2>Inspiração</h2>
-          </div>
-          <div className="bookmarks-topic-content">
-            {/* <div className="bookmarks-zweihander-topic"></div> */}
-            <div className="bookmarks-inspo-topic">
-              <a href="https://rice.place/" target="_blank" rel="noreferrer noopener">
-                <img src="https://rice.place/button/paperice.gif" />
-              </a>
-              <a href="https://adilene.net/" target="_blank" rel="noreferrer noopener">
-                <img src="https://adilene.net/images/sitebutton.gif" />
-              </a>
-              <a href="https://joo.sh" target="_blank" rel="noreferrer noopener">
-                <img src="https://files.joo.sh/img/buttons/jooshRice.gif" />
-              </a>
-              <a href="https://nyscyra.net/" target="_blank" rel="noreferrer noopener">
-                <img src="https://nyscyra.net/img/button.png" />
-              </a>
-              <a href="https://medjed.nekoweb.org/" target="_blank" rel="noreferrer noopener">
-                <img
-                  src="https://medjed.nekoweb.org/assets/images/button.jpg"
-                  alt="Medjed"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </Standalone>
   );
