@@ -22,8 +22,8 @@
 .toc h2 {
   font-weight: 600;
   font-family: var(--primary-font);
-  border-bottom: 1px solid #fafafa40;
   text-transform: uppercase;
+  border-bottom: 1px solid #fafafa40;
 
   line-height: 1.5;
   width: 100%;

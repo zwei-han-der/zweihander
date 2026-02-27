@@ -1,10 +1,18 @@
-import v105 from '../../data/markdown/changelog/v1.0.5.md?raw';
-import v104 from '../../data/markdown/changelog/v1.0.4.md?raw';
-import v103 from '../../data/markdown/changelog/v1.0.3.md?raw';
-import v102 from '../../data/markdown/changelog/v1.0.2.md?raw';
-import v101 from '../../data/markdown/changelog/v1.0.1.md?raw';
+import v106 from '../../data/changelog/v1.0.6.md?raw';
+import v105 from '../../data/changelog/v1.0.5.md?raw';
+import v104 from '../../data/changelog/v1.0.4.md?raw';
+import v103 from '../../data/changelog/v1.0.3.md?raw';
+import v102 from '../../data/changelog/v1.0.2.md?raw';
+import v101 from '../../data/changelog/v1.0.1.md?raw';
 
 export const logs = [
+    {
+        title: "refazendo changelog",
+        version: "changelog #6",
+        date: "27/02/2026",
+        description: "Changelog agora com modal.",
+        content: v106
+    },
     {
         title: "boookkkkmmmmaaarrrkkkkssss",
         version: "changelog #5",
