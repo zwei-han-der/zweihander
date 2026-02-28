@@ -4,8 +4,16 @@ import v104 from '../../data/changelog/v1.0.4.md?raw';
 import v103 from '../../data/changelog/v1.0.3.md?raw';
 import v102 from '../../data/changelog/v1.0.2.md?raw';
 import v101 from '../../data/changelog/v1.0.1.md?raw';
+import teste from '../../data/changelog/teste.md?raw';
 
 export const logs = [
+    {
+        title: "teste markdown",
+        version: "temporário",
+        date: "27/02/2026",
+        description: "Teste markdown",
+        content: teste
+    },
     {
         title: "refazendo changelog",
         version: "changelog #6",

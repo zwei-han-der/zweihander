@@ -64,6 +64,7 @@
 }
 
 .changelog-modal .modal-content {
+  overflow-y: auto;
   max-width: 800px;
   width: 90%;
 }
@@ -73,7 +74,8 @@
   min-height: 462px;
   max-height: 462px;
   padding: 1.5rem;
-  overflow-y  : auto;
+  padding-bottom: 0;
+  overflow-y: auto;
 }
 
 .changelog-modal-header {
