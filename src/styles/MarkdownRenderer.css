@@ -36,8 +36,11 @@
 
 .md-h3 {
   font-size: 1.25rem;
+  font-family: var(--primary-font);
   font-weight: 500;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .md-h4 {
