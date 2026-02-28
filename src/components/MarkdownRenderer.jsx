@@ -32,7 +32,6 @@ function MarkdownRenderer({ content, className = "" }) {
           h5: ({ ...props }) => <h5 className="md-h5" {...props} />,
           h6: ({ ...props }) => <h6 className="md-h6" {...props} />,
           p: ({ node, children, ...props }) => {
-            // Se o parágrafo contém apenas uma imagem, renderiza como div para evitar <div> dentro de <p>
             if (
               node &&
               node.children &&
