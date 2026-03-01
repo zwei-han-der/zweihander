@@ -37,7 +37,7 @@ function Changelog() {
             const isOverflowing = overflowStates[`title-${index}`];
 
             return (
-              <div
+              <button
                 className="post"
                 key={index}
                 onClick={() => openModal(index)}
@@ -52,8 +52,10 @@ function Changelog() {
                       titleRefs[index].current = el;
                     }}
                   >
-                    <h2>{log.title}</h2>
-                    <span className="header-version">{log.version}</span>
+                    <span className="header-title-content">
+                      <h2>{log.title}</h2>
+                      <span className="header-version">{log.version}</span>
+                    </span>
                   </span>
                   <span className="header-date">
                     <p>{log.date}</p>
@@ -62,7 +64,7 @@ function Changelog() {
                 <div className="description">
                   <p>{log.description}</p>
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>

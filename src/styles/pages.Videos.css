@@ -18,6 +18,14 @@
   cursor: pointer;
   transition: all 0.2s ease;
   max-width: 100%;
+    background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 
 .video-card:hover {
