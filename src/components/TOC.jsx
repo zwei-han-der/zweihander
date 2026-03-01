@@ -1,12 +1,17 @@
 import { NavLink } from "react-router-dom";
-import "../styles/TOC.css";
+import "../styles/components.TOC.css";
 
 function TOC() {
   return (
     <div className="toc">
       <h2>Páginas</h2>
       <div className="list">
-        <NavLink to="/" className="list-item">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "list-item active" : "list-item"
+          }
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +25,12 @@ function TOC() {
           </span>
           <p>HOME</p>
         </NavLink>
-        <NavLink to="/videos" className="list-item" activeClassName="active">
+        <NavLink
+          to="/videos"
+          className={({ isActive }) =>
+            isActive ? "list-item active" : "list-item"
+          }
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +44,12 @@ function TOC() {
           </span>
           <p>Vídeos</p>
         </NavLink>
-        <NavLink to="/bookmarks" className="list-item">
+        <NavLink
+          to="/bookmarks"
+          className={({ isActive }) =>
+            isActive ? "list-item active" : "list-item"
+          }
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +63,12 @@ function TOC() {
           </span>
           <p>Bookmarks</p>
         </NavLink>
-        <NavLink to="/changelog" className="list-item">
+        <NavLink
+          to="/changelog"
+          className={({ isActive }) =>
+            isActive ? "list-item active" : "list-item"
+          }
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,19 @@
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    
+    gap: 1rem;
+}
+
+.main-content a {
+    text-decoration: underline;
+    color: #fafafa;
+}
+
+.p-content {
+    text-align: center;
+}

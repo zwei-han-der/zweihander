@@ -1,5 +1,5 @@
 import Standalone from "../layouts/Standalone";
-import "../styles/Bookmarks.css";
+import "../styles/pages.Bookmarks.css";
 
 function Bookmarks() {
   return (
