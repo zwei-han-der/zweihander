@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "../styles/TOC.css";
+import "../styles/components.TOC.css";
 
 function TOC() {
   return (

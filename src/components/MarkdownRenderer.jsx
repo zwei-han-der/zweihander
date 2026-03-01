@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
-import "../styles/MarkdownRenderer.css";
+import "../styles/components.MarkdownRenderer.css";
 
 function MarkdownInput(props) {
   if (props.type === "checkbox") {

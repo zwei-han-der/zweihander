@@ -1,6 +1,6 @@
 import MusicPlayer from "../components/MusicPlayer";
 import TOC from "../components/TOC";
-import "../styles/Default.layout.css";
+import "../styles/layout.Default.css";
 
 function Default({ children }) {
   return (

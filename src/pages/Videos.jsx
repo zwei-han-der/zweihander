@@ -2,7 +2,7 @@ import { useState } from "react";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import { videos } from "../data/videos";
-import "../styles/Videos.css";
+import "../styles/pages.Videos.css";
 
 function Videos() {
   const [selectedVideo, setSelectedVideo] = useState(null);

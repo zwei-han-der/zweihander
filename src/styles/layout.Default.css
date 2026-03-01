@@ -36,11 +36,11 @@ main.default {
 }
 
 @media (max-width: 900px) {
-  main.layout {
+  main.default {
     grid-template-columns: 1fr;
   }
 
-  .layout-main {
+  .default {
     justify-content: stretch;
   }
 }

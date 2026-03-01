@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 import useTextOverflow from "../utils/useTextOverflow";
 import { logs } from "../data/changelog/index";
-import "../styles/Changelog.css";
+import "../styles/pages.Changelog.css";
 
 function Changelog() {
   const [selectedLog, setSelectedLog] = useState(null);
   const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
 
-  const overflowRefs = logs.map((_, index) => ({
-    key: `title-${index}`,
-    ref: titleRefs[index],
-  }));
+  const overflowRefs = useMemo(
+    () =>
+      logs.map((_, index) => ({
+        key: `title-${index}`,
+        ref: titleRefs[index],
+      })),
+    [titleRefs]
+  );
 
   const overflowStates = useTextOverflow(overflowRefs, [logs]);
 

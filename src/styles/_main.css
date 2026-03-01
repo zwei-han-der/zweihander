@@ -56,6 +56,8 @@ body {
     radial-gradient(at 24% 16%, var(--color03) 0px, transparent 50%),
     radial-gradient(at 66% 4%, var(--color04) 0px, transparent 50%),
     var(--color01);
+  background-repeat: no-repeat;
+  background-clip: border-box;
 }
 
 #root {
