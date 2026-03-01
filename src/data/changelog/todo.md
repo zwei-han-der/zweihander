@@ -1,4 +1,4 @@
-Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site. Ultima atualização em: **28/08/2026**
+Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site. Última atualização em: **01/03/2026**
 
 ## Planejado
 

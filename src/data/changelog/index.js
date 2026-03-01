@@ -1,11 +1,12 @@
-import v016 from '../../data/changelog/v0.1.6.md?raw';
-import v015 from '../../data/changelog/v0.1.5.md?raw';
-import v014 from '../../data/changelog/v0.1.4.md?raw';
-import v013 from '../../data/changelog/v0.1.3.md?raw';
-import v012 from '../../data/changelog/v0.1.2.md?raw';
-import v011 from '../../data/changelog/v0.1.1.md?raw';
-import v100 from '../../data/changelog/v1.0.0.md?raw';
-import todo from '../../data/changelog/todo.md?raw';
+import v016 from './v0.1.6.md?raw';
+import v015 from './v0.1.5.md?raw';
+import v014 from './v0.1.4.md?raw';
+import v013 from './v0.1.3.md?raw';
+import v012 from './v0.1.2.md?raw';
+import v011 from './v0.1.1.md?raw';
+import v100 from './v1.0.0.md?raw';
+import v101 from './v1.0.1.md?raw';
+import todo from './todo.md?raw';
 
 export const logs = [
     {
@@ -14,6 +15,13 @@ export const logs = [
         date: "27/02/2026",
         description: "Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site.",
         content: todo
+    },
+    {
+        title: "Alguns ajustes",
+        version: "changelog #8 - v1.0.1",
+        date: "01/03/2026",
+        description: "Melhorias na acessibilidade, correções de bugs e otimizações gerais do site.",
+        content: v101
     },
     {
         title: "Zweihander v1.0.0",
