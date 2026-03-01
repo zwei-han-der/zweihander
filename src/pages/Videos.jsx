@@ -20,7 +20,7 @@ function Videos() {
       <Standalone>
         <div className="video-grid">
           {videos.map((video, index) => (
-            <div
+            <button
               key={index}
               className="video-card"
               onClick={() => openModal(index)}
@@ -36,7 +36,7 @@ function Videos() {
                 </h3>
                 <span className="video-date">{video.date}</span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </Standalone>

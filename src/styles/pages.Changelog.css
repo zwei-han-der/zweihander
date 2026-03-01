@@ -11,6 +11,14 @@
 .post {
   padding: 0.75rem;
   border-radius: 12px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 
 .post:hover {
@@ -26,9 +34,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
 
   border-bottom: 1px solid #fafafa50;
   line-height: 1.5;
+  overflow: hidden;
 }
 
 .post > .description {
@@ -42,24 +52,31 @@
   font-family: var(--primary-font);
   text-transform: uppercase;
 
-  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.header-title-content {
+  display: inline-flex;
   align-items: baseline;
   gap: 5px;
+}
 
-  display: inline-flex;
-  overflow: hidden;
+.header-title:not(.is-overflowing) .header-title-content {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
 }
 
 .header-title h2 {
   font-weight: 500;
 }
 
-.header-title.is-overflowing:hover {
-  animation: marquee 5s linear infinite;
-  overflow: visible;
-  text-overflow: clip;
+.header-title.is-overflowing:hover .header-title-content {
+  animation: marquee-slide 5s ease-in-out infinite;
 }
 
 .header-version {
@@ -68,8 +85,12 @@
 }
 
 .header-date {
-  padding-left: 0.5rem;
+  padding-left: 0.1rem;
   color: #fafafa99;
+  flex-shrink: 0;
+  min-width: max(80px, 5%);
+  text-align: right;
+  white-space: nowrap;
 }
 
 .changelog-modal .modal-content {
@@ -129,11 +150,18 @@
   color: #fafafa99;
 }
 
-@keyframes marquee {
+@keyframes marquee-slide {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
+
+  45%,
+  55% {
+    transform: translateX(-50%);
+  }
+
+  90%,
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
 }

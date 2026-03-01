@@ -24,7 +24,7 @@ function Modal({ isOpen, onClose, children, className = "" }) {
         className={`modal-content ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="modal-close" onClick={onClose}>
+        <button className="modal-close" onClick={onClose} aria-label="Close modal">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
