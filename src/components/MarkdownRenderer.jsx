@@ -96,7 +96,7 @@ function MarkdownRenderer({ content, className = "" }) {
             }
 
             const handleCopy = () => {
-              if (navigator && navigator.clipboard) {
+              if (typeof navigator !== "undefined" && navigator.clipboard) {
                 navigator.clipboard.writeText(codeText);
               }
             };
