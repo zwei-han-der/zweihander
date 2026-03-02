@@ -14,11 +14,11 @@ function MusicPlayer() {
     seekValue,
     progress,
     seekSliderRef,
+    audioRef,
     playPauseTrack,
     prevTrack,
     nextTrack,
     seekTo,
-    audioRef,
   } = useMusicPlayer();
 
   return (

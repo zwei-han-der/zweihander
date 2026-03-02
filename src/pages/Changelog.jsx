@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import MarkdownRenderer from "../components/MarkdownRenderer";
@@ -9,17 +9,20 @@ import "../styles/pages.Changelog.css";
 function Changelog() {
   const [selectedLog, setSelectedLog] = useState(null);
   const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
+  const modalTitleRef = useRef(null);
 
   const overflowRefs = useMemo(
-    () =>
-      logs.map((_, index) => ({
+    () => [
+      ...logs.map((_, index) => ({
         key: `title-${index}`,
         ref: titleRefs[index],
       })),
-    [titleRefs]
+      { key: 'modal-title', ref: modalTitleRef },
+    ],
+    [titleRefs, modalTitleRef]
   );
 
-  const overflowStates = useTextOverflow(overflowRefs, [logs]);
+  const overflowStates = useTextOverflow(overflowRefs, [logs, selectedLog]);
 
   const openModal = (index) => {
     setSelectedLog(index);
@@ -41,10 +44,9 @@ function Changelog() {
                 className="post"
                 key={index}
                 onClick={() => openModal(index)}
-                style={{ cursor: "pointer" }}
               >
                 <div className="header">
-                  <span
+                  <div
                     className={`header-title ${
                       isOverflowing ? "is-overflowing" : ""
                     }`}
@@ -52,11 +54,11 @@ function Changelog() {
                       titleRefs[index].current = el;
                     }}
                   >
-                    <span className="header-title-content">
+                    <div className="header-title-content">
                       <h2>{log.title}</h2>
                       <span className="header-version">{log.version}</span>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                   <span className="header-date">
                     <p>{log.date}</p>
                   </span>
@@ -78,13 +80,22 @@ function Changelog() {
         {selectedLog !== null && (
           <div className="changelog-modal-content">
             <div className="changelog-modal-header">
-              <div className="changelog-modal-header-content">
-                <h2>{logs[selectedLog].title}</h2>
-                <span className="version">{logs[selectedLog].version}</span>
+              <div
+                className={`modal-header-title ${
+                  overflowStates['modal-title'] ? 'is-overflowing' : ''
+                }`}
+                ref={modalTitleRef}
+              >
+                <div className="modal-header-title-content">
+                  <h2>{logs[selectedLog].title}</h2>
+                  <span className="modal-header-version">
+                    {logs[selectedLog].version}
+                  </span>
+                </div>
               </div>
-              <div className="changelog-modal-meta">
-                <span className="date">{logs[selectedLog].date}</span>
-              </div>
+              <span className="modal-header-date">
+                {logs[selectedLog].date}
+              </span>
             </div>
             <MarkdownRenderer
               content={logs[selectedLog].content}

@@ -6,6 +6,7 @@ import v012 from './v0.1.2.md?raw';
 import v011 from './v0.1.1.md?raw';
 import v100 from './v1.0.0.md?raw';
 import v101 from './v1.0.1.md?raw';
+import v110 from './v1.1.0.md?raw';
 import todo from './todo.md?raw';
 
 export const logs = [
@@ -15,6 +16,13 @@ export const logs = [
         date: "27/02/2026",
         description: "Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site.",
         content: todo
+    },
+    {
+        title: "responsividade é o inferno na terra",
+        version: "changelog #9 - v1.1.0",
+        date: "02/03/2026",
+        description: "Responsividade completamente revisada, correções de overflow e melhoria do comportamento do modal do changelog.",
+        content: v110
     },
     {
         title: "Alguns ajustes",
