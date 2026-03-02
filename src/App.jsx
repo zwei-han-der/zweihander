@@ -23,7 +23,10 @@ function App() {
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/changelog">
+            <Route index element={<Changelog />} />
+            <Route path=":logId" element={<Changelog />} />
+          </Route>
           <Route path="/videos" element={<Videos />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/profile" element={<Profile />} />

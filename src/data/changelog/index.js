@@ -1,21 +1,23 @@
+// https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
+
 const changelogContentLoaders = {
-  todo: () => import("./todo.md?raw"),
-  v110: () => import("./v1.1.0.md?raw"),
-  v101: () => import("./v1.0.1.md?raw"),
-  v100: () => import("./v1.0.0.md?raw"),
-  v016: () => import("./v0.1.6.md?raw"),
-  v015: () => import("./v0.1.5.md?raw"),
-  v014: () => import("./v0.1.4.md?raw"),
-  v013: () => import("./v0.1.3.md?raw"),
-  v012: () => import("./v0.1.2.md?raw"),
-  v011: () => import("./v0.1.1.md?raw"),
+  U2FsdGVkX18BN4Sch4PRgb1obNas3BsT: () => import("./todo.md?raw"),
+  U2FsdGVkX19UopSScWDJRvxRzh6ANhVP: () => import("./v1.1.0.md?raw"),
+  U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc: () => import("./v1.0.1.md?raw"),
+  U2FsdGVkX190LnCf80wWGpZjhZeb2Um5: () => import("./v1.0.0.md?raw"),
+  U2FsdGVkX18im7TGDHSJXjcy4hvfLGIx: () => import("./v0.1.6.md?raw"),
+  U2FsdGVkX18mm6OH9J4yRQSPr3ngvGGq: () => import("./v0.1.5.md?raw"),
+  U2FsdGVkX198i7SJoWK9NIZA3hq9RrIv: () => import("./v0.1.4.md?raw"),
+  U2FsdGVkX19amAXgGFyj5fx6Etddr7sA: () => import("./v0.1.3.md?raw"),
+  U2FsdGVkX183LL5sNWZbsp2Pife6TJR9: () => import("./v0.1.2.md?raw"),
+  U2FsdGVkX18D8BTytUeooMTdRrZgvC4c: () => import("./v0.1.1.md?raw"),
 };
 
 const contentCache = new Map();
 
 export const logs = [
   {
-    id: "todo",
+    id: "U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
     title: "lista de afazeres",
     version: "fixado",
     date: "27/02/2026",
@@ -23,7 +25,7 @@ export const logs = [
       "Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site.",
   },
   {
-    id: "v110",
+    id: "U2FsdGVkX19UopSScWDJRvxRzh6ANhVP",
     title: "responsividade é o inferno na terra",
     version: "changelog #9 - v1.1.0",
     date: "02/03/2026",
@@ -31,7 +33,7 @@ export const logs = [
       "Responsividade completamente revisada, correções de overflow e melhoria do comportamento do modal do changelog.",
   },
   {
-    id: "v101",
+    id: "U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc",
     title: "Alguns ajustes",
     version: "changelog #8 - v1.0.1",
     date: "01/03/2026",
@@ -39,53 +41,53 @@ export const logs = [
       "Melhorias na acessibilidade, correções de bugs e otimizações gerais do site.",
   },
   {
-    id: "v100",
+    id: "U2FsdGVkX190LnCf80wWGpZjhZeb2Um5",
     title: "Zweihander v1.0.0",
     version: "changelog #7 - v1.0.0",
     date: "28/02/2026",
     description: "Primeira versão estável.",
   },
   {
-    id: "v016",
+    id: "U2FsdGVkX18im7TGDHSJXjcy4hvfLGIx",
     title: "refazendo changelog",
-    version: "changelog #6 - v0.4.1",
+    version: "changelog #6 - v0.1.6",
     date: "27/02/2026",
     description: "Changelog agora com modal.",
   },
   {
-    id: "v015",
+    id: "U2FsdGVkX18mm6OH9J4yRQSPr3ngvGGq",
     title: "boookkkkmmmmaaarrrkkkkssss",
-    version: "changelog #5 - v0.4.0",
+    version: "changelog #5 - v0.1.5",
     date: "25/02/2026",
     description:
       "Adicionada a aba de bookmarks. Ainda não está 100% completa, mas tá lá.",
   },
   {
-    id: "v014",
+    id: "U2FsdGVkX198i7SJoWK9NIZA3hq9RrIv",
     title: "marquee é legal demais",
-    version: "changelog #4 - v0.3.1",
+    version: "changelog #4 - v0.1.4",
     date: "25/02/2026",
     description:
       "Gostei tanto que mudei a animação de marquee no overflow do texto para um utilitário próprio.",
   },
   {
-    id: "v013",
+    id: "U2FsdGVkX19amAXgGFyj5fx6Etddr7sA",
     title: "anotações são a base da recordação",
-    version: "changelog #3 - v0.3.0",
+    version: "changelog #3 - v0.1.3",
     date: "25/02/2026",
     description:
       "Changelog adicionado, pronto para receber atualizações do site.",
   },
   {
-    id: "v012",
+    id: "U2FsdGVkX183LL5sNWZbsp2Pife6TJR9",
     title: "recordar é viver",
-    version: "changelog #2 - v0.2.0",
+    version: "changelog #2 - v0.1.2",
     date: "24/02/2026",
     description:
       "Aba de vídeos pronta, feita para armazenar, principalmente, minhas jogadas no basquete.",
   },
   {
-    id: "v011",
+    id: "U2FsdGVkX18D8BTytUeooMTdRrZgvC4c",
     title: "música é vida",
     version: "changelog #1 - v0.1.0",
     date: "23/02/2026",

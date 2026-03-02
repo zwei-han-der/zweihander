@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useEffect, lazy, Suspense } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import useTextOverflow from "../utils/useTextOverflow";
@@ -8,11 +9,16 @@ import "../styles/pages.Changelog.css";
 const MarkdownRenderer = lazy(() => import("../components/MarkdownRenderer"));
 
 function Changelog() {
-  const [selectedLog, setSelectedLog] = useState(null);
+  const { logId } = useParams();
+  const navigate = useNavigate();
+
   const [selectedContent, setSelectedContent] = useState("");
   const [isLoadingContent, setIsLoadingContent] = useState(false);
   const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
   const modalTitleRef = useRef(null);
+
+  const selectedLog = logId ? logs.findIndex((log) => log.id === logId) : null;
+  const isModalOpen = selectedLog !== null && selectedLog !== -1;
 
   const overflowRefs = useMemo(
     () => [
@@ -30,7 +36,7 @@ function Changelog() {
   useEffect(() => {
     let isMounted = true;
 
-    if (selectedLog === null) {
+    if (!isModalOpen) {
       setSelectedContent("");
       setIsLoadingContent(false);
       return () => {
@@ -39,11 +45,11 @@ function Changelog() {
     }
 
     const loadContent = async () => {
-      const logId = logs[selectedLog].id;
+      const currentLog = logs[selectedLog];
       setIsLoadingContent(true);
 
       try {
-        const content = await loadLogContent(logId);
+        const content = await loadLogContent(currentLog.id);
 
         if (!isMounted) {
           return;
@@ -68,14 +74,14 @@ function Changelog() {
     return () => {
       isMounted = false;
     };
-  }, [selectedLog]);
+  }, [selectedLog, isModalOpen]);
 
-  const openModal = (index) => {
-    setSelectedLog(index);
+  const handleLogClick = (index) => {
+    navigate(`/changelog/${logs[index].id}`);
   };
 
-  const closeModal = () => {
-    setSelectedLog(null);
+  const handleCloseModal = () => {
+    navigate("/changelog");
   };
 
   return (
@@ -89,7 +95,7 @@ function Changelog() {
               <button
                 className="post"
                 key={index}
-                onClick={() => openModal(index)}
+                onClick={() => handleLogClick(index)}
               >
                 <div className="header">
                   <div
@@ -119,11 +125,11 @@ function Changelog() {
       </Standalone>
 
       <Modal
-        isOpen={selectedLog !== null}
-        onClose={closeModal}
+        isOpen={isModalOpen}
+        onCloseNavigate={handleCloseModal}
         className="changelog-modal"
       >
-        {selectedLog !== null && (
+        {isModalOpen && (
           <div className="changelog-modal-content">
             <div className="changelog-modal-header">
               <div
