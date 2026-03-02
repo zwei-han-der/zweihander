@@ -1,6 +1,5 @@
 import diamanteslagrimaserostosparaesquecer from "../assets/images/diamantes-lagrimas-e-rostos-para-esquecer.jpg";
 import abaixodoradar from "../assets/images/abaixo-do-radar.jpg";
-import thefirsttime from "../assets/images/the-first-time.jpg";
 import chromakopia from "../assets/images/chromakopia.jpg";
 import produtodoambiente from "../assets/images/produto-do-ambiente.jpg";
 
@@ -25,13 +24,6 @@ export const trackList = [
     album: "ABAIXO DO RADAR",
     cover: abaixodoradar,
     link: "https://file.garden/aZ5b6SvMW2wrHr27/ekl7fd.mp3",
-  },
-  {
-    name: "NIGHTS LIKE THIS",
-    artist: "The Kid LAROI",
-    album: "THE FIRST TIME",
-    cover: thefirsttime,
-    link: "https://file.garden/aZ5b6SvMW2wrHr27/vnsjgo.mp3",
   },
   {
     name: "Like Him",
