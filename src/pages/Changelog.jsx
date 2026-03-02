@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import MarkdownRenderer from "../components/MarkdownRenderer";
@@ -9,7 +9,7 @@ import "../styles/pages.Changelog.css";
 function Changelog() {
   const [selectedLog, setSelectedLog] = useState(null);
   const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
-  const [modalTitleRef] = useState({ current: null });
+  const modalTitleRef = useRef(null);
 
   const overflowRefs = useMemo(
     () => [
