@@ -1,13 +1,16 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect, lazy, Suspense } from "react";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
-import MarkdownRenderer from "../components/MarkdownRenderer";
 import useTextOverflow from "../utils/useTextOverflow";
-import { logs } from "../data/changelog/index";
+import { logs, loadLogContent } from "../data/changelog/index";
 import "../styles/pages.Changelog.css";
+
+const MarkdownRenderer = lazy(() => import("../components/MarkdownRenderer"));
 
 function Changelog() {
   const [selectedLog, setSelectedLog] = useState(null);
+  const [selectedContent, setSelectedContent] = useState("");
+  const [isLoadingContent, setIsLoadingContent] = useState(false);
   const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
   const modalTitleRef = useRef(null);
 
@@ -17,12 +20,55 @@ function Changelog() {
         key: `title-${index}`,
         ref: titleRefs[index],
       })),
-      { key: 'modal-title', ref: modalTitleRef },
+      { key: "modal-title", ref: modalTitleRef },
     ],
-    [titleRefs, modalTitleRef]
+    [titleRefs, modalTitleRef],
   );
 
-  const overflowStates = useTextOverflow(overflowRefs, [logs, selectedLog]);
+  const overflowStates = useTextOverflow(overflowRefs, [selectedLog]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    if (selectedLog === null) {
+      setSelectedContent("");
+      setIsLoadingContent(false);
+      return () => {
+        isMounted = false;
+      };
+    }
+
+    const loadContent = async () => {
+      const logId = logs[selectedLog].id;
+      setIsLoadingContent(true);
+
+      try {
+        const content = await loadLogContent(logId);
+
+        if (!isMounted) {
+          return;
+        }
+
+        setSelectedContent(content);
+      } catch {
+        if (!isMounted) {
+          return;
+        }
+
+        setSelectedContent("Não foi possível carregar este changelog.");
+      } finally {
+        if (isMounted) {
+          setIsLoadingContent(false);
+        }
+      }
+    };
+
+    loadContent();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedLog]);
 
   const openModal = (index) => {
     setSelectedLog(index);
@@ -82,7 +128,7 @@ function Changelog() {
             <div className="changelog-modal-header">
               <div
                 className={`modal-header-title ${
-                  overflowStates['modal-title'] ? 'is-overflowing' : ''
+                  overflowStates["modal-title"] ? "is-overflowing" : ""
                 }`}
                 ref={modalTitleRef}
               >
@@ -97,10 +143,17 @@ function Changelog() {
                 {logs[selectedLog].date}
               </span>
             </div>
-            <MarkdownRenderer
-              content={logs[selectedLog].content}
-              className="markdown-modal-content"
-            />
+
+            {isLoadingContent ? (
+              <p>Carregando changelog...</p>
+            ) : (
+              <Suspense fallback={<p>Carregando renderização...</p>}>
+                <MarkdownRenderer
+                  content={selectedContent}
+                  className="markdown-modal-content"
+                />
+              </Suspense>
+            )}
           </div>
         )}
       </Modal>

@@ -1,12 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { themes } from "./data/themes";
-import Home from "./pages/Home";
-import Changelog from "./pages/Changelog";
-import NotFound from "./pages/NotFound";
-import Videos from "./pages/Videos";
-import Bookmarks from "./pages/Bookmarks";
-import Profile from "./pages/Profile";
+
+const Home = lazy(() => import("./pages/Home"));
+const Changelog = lazy(() => import("./pages/Changelog"));
+const Videos = lazy(() => import("./pages/Videos"));
+const Bookmarks = lazy(() => import("./pages/Bookmarks"));
+const Profile = lazy(() => import("./pages/Profile"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   useEffect(() => {
@@ -19,14 +20,16 @@ function App() {
 
   return (
     <BrowserRouter basename="/zweihander">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/changelog" element={<Changelog />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/bookmarks" element={<Bookmarks />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
