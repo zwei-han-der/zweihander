@@ -6,6 +6,8 @@ Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que
 - Adicionar botão shuffle e possibilidade de reordenar a ordem das músicas que irão tocar
 - Adicionar HTML parser no Markdown renderer
 - Adicionar algo de verdade na [Home](/zweihander/)
+- Adicionar aba Playground para projetos web experimentais
+- Adicionar aba Galeria
 
 ## Em progresso
 
