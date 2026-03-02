@@ -11,10 +11,10 @@ Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que
 
 ## Em progresso
 
-- Atualizar responsividade para mobile
 
 ## Completo
 
+- Atualizada responsividade para mobile
 - Suporte a Markdown e Syntax Highlight
 - Aba [Bookmarks](/zweihander/bookmarks)
 - Aba [Changelog](/zweihander/changelog)
