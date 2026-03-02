@@ -93,17 +93,83 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 1.25rem;
+  }
+
+  .modal-content {
+    padding: 1.125rem;
+    border-radius: 1.25rem;
+  }
+
+  .modal-close {
+    width: 2.25rem;
+    height: 2.25rem;
+    top: 0.875rem;
+    right: 0.875rem;
+  }
+
+  .modal-close svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
   .modal-overlay {
     padding: 1rem;
   }
 
   .modal-content {
     padding: 1rem;
+    border-radius: 1rem;
   }
 
   .modal-close {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .modal-close svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+
+  .modal-content {
+    padding: 0.875rem;
+    border-radius: 0.875rem;
+  }
+
+  .modal-close {
+    width: 1.875rem;
+    height: 1.875rem;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
+
+  .modal-close svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal-content {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+  }
+
+  .modal-close {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }

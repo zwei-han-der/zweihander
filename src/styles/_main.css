@@ -5,6 +5,10 @@
   --secondary-font: "Inter";
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,8 +62,18 @@ body {
     var(--color01);
   background-repeat: no-repeat;
   background-clip: border-box;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+  }
 }

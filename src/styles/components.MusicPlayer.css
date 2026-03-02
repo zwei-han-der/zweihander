@@ -9,6 +9,8 @@
 
   padding: 1rem;
   width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .controls {
@@ -58,6 +60,8 @@ i.fas.fa-backward {
   display: flex;
   gap: 1rem;
   align-items: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .track-cover {
@@ -71,6 +75,8 @@ i.fas.fa-backward {
   font-family: var(--secondary-font);
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
 
   overflow: hidden;
   white-space: nowrap;
@@ -84,6 +90,7 @@ i.fas.fa-backward {
   color: #fff;
 
   display: inline-block;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -100,6 +107,7 @@ i.fas.fa-backward {
   color: #fff;
 
   display: inline-block;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -115,7 +123,7 @@ i.fas.fa-backward {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 
@@ -168,4 +176,117 @@ input[type="range"]::-moz-range-thumb {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #musicplayer {
+    padding: 0.875rem;
+    border-radius: 1.75rem;
+  }
+
+  .controls td {
+    padding: 8px 4px 0px 4px;
+  }
+
+  .seeking {
+    padding: 0.875rem;
+    padding-bottom: 0;
+  }
+
+  .track-info {
+    gap: 0.875rem;
+  }
+
+  .track-cover {
+    width: 70px;
+    height: 70px;
+    border-radius: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #musicplayer {
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+  }
+
+  .controls td {
+    padding: 6px 3px 0px 3px;
+  }
+
+  .seeking {
+    padding: 0.75rem;
+    padding-bottom: 0;
+  }
+
+  .track-info {
+    gap: 0.75rem;
+  }
+
+  .track-meta {
+    min-width: 0;
+  }
+
+  .track-title {
+    font-size: 1.05rem;
+  }
+
+  .track-album {
+    font-size: 0.8rem;
+  }
+
+  .track-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .track-cover {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  #musicplayer {
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+  }
+
+  .controls td {
+    padding: 5px 2px 0px 2px;
+  }
+
+  .seeking {
+    padding: 0.625rem;
+    padding-bottom: 0;
+  }
+
+  .track-info {
+    gap: 0.625rem;
+  }
+
+  .track-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.625rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #musicplayer {
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .track-cover {
+    width: 45px;
+    height: 45px;
+  }
+
+  .controls td {
+    padding: 4px 1px 0px 1px;
+  }
 }
