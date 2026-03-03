@@ -1,0 +1,242 @@
+.blog-posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s, opacity 0.2s;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .blog-post {
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    box-sizing: border-box;
+  
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .blog-post:hover {
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .blog-post-cover {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .blog-post-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .blog-post-body {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  .blog-post > .blog-post-body > .blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  
+    border-bottom: 1px solid #fafafa50;
+    line-height: 1.5;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .blog-header-title {
+    font-weight: 600;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+  
+    overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .blog-header-title-content {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    min-width: 0;
+  }
+  
+  .blog-header-title:not(.is-overflowing) .blog-header-title-content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .blog-header-title h2 {
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .blog-header-title.is-overflowing:hover .blog-header-title-content {
+    animation: blog-marquee-slide 5s ease-in-out infinite;
+  }
+  
+  .blog-header-version {
+    text-overflow: ellipsis;
+    color: #fafafa99;
+    overflow: hidden;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  .blog-header-date {
+    padding-left: 0.1rem;
+    color: #fafafa99;
+    flex-shrink: 0;
+    min-width: max(80px, 5%);
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  .blog-header-date p {
+    margin: 0;
+  }
+  
+  .blog-post > .blog-post-body > .blog-description {
+    font-family: var(--secondary-font);
+  
+    padding: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @keyframes blog-marquee-slide {
+    0% {
+      transform: translateX(0);
+    }
+  
+    45%,
+    55% {
+      transform: translateX(-50%);
+    }
+  
+    90%,
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-posts {
+      gap: 0.375rem;
+    }
+  
+    .blog-post {
+      padding: 0.625rem;
+      border-radius: 10px;
+      gap: 0.625rem;
+    }
+  
+    .blog-post > .blog-post-body > .blog-header {
+      gap: 0.625rem;
+    }
+  
+    .blog-post > .blog-post-body > .blog-description {
+      padding: 0.375rem;
+    }
+  
+    .blog-header-date {
+      min-width: 70px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .blog-posts {
+      gap: 0.3rem;
+    }
+  
+    .blog-post {
+      padding: 0.5rem;
+      border-radius: 8px;
+      gap: 0.5rem;
+    }
+  
+    .blog-post > .blog-post-body > .blog-header {
+      gap: 0.5rem;
+    }
+  
+    .blog-post > .blog-post-body > .blog-description {
+      padding: 0.3rem;
+    }
+  
+    .blog-header-date {
+      min-width: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-posts {
+      gap: 0.25rem;
+    }
+  
+    .blog-post {
+      padding: 0.375rem;
+      border-radius: 6px;
+      flex-direction: column;
+    }
+  
+    .blog-post-cover {
+      width: 100%;
+      height: 160px;
+    }
+  
+    .blog-post > .blog-post-body > .blog-header {
+      gap: 0.375rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .blog-post > .blog-post-body > .blog-description {
+      padding: 0.25rem;
+    }
+  
+    .blog-header-title {
+      width: 100%;
+    }
+  
+    .blog-header-date {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .blog-header-version {
+      display: none;
+    }
+  }
