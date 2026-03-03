@@ -2,11 +2,19 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import "../styles/components.Modal.css";
 
-function Modal({ isOpen, onClose, children, className = "" }) {
+function Modal({ isOpen, onClose, onCloseNavigate, children, className = "" }) {
   useEffect(() => {
+    const handleClose = () => {
+      if (onCloseNavigate) {
+        onCloseNavigate();
+      } else {
+        onClose();
+      }
+    };
+
     const handleEscape = (e) => {
       if (e.key === "Escape") {
-        onClose();
+        handleClose();
       }
     };
 
@@ -14,17 +22,29 @@ function Modal({ isOpen, onClose, children, className = "" }) {
       document.addEventListener("keydown", handleEscape);
       return () => document.removeEventListener("keydown", handleEscape);
     }
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, onCloseNavigate]);
 
   if (!isOpen) return null;
 
+  const handleClose = () => {
+    if (onCloseNavigate) {
+      onCloseNavigate();
+    } else {
+      onClose();
+    }
+  };
+
   return createPortal(
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={handleClose}>
       <div
         className={`modal-content ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="modal-close" onClick={onClose} aria-label="Close modal">
+        <button
+          className="modal-close"
+          onClick={handleClose}
+          aria-label="Close modal"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

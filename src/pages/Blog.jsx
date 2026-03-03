@@ -3,35 +3,38 @@ import { useParams, useNavigate } from "react-router-dom";
 import Standalone from "../layouts/Standalone";
 import Modal from "../components/Modal";
 import useTextOverflow from "../utils/useTextOverflow";
-import { logs, loadLogContent } from "../data/changelog/index";
+import { posts, loadBlogContent } from "../data/blog/index";
+import "../styles/pages.Blog.css";
 import "../styles/pages.Changelog.css";
 
 const MarkdownRenderer = lazy(() => import("../components/MarkdownRenderer"));
 
-function Changelog() {
-  const { logId } = useParams();
+function Blog() {
+  const { postId } = useParams();
   const navigate = useNavigate();
 
   const [selectedContent, setSelectedContent] = useState("");
   const [isLoadingContent, setIsLoadingContent] = useState(false);
-  const [titleRefs] = useState(() => logs.map(() => ({ current: null })));
+  const [titleRefs] = useState(() => posts.map(() => ({ current: null })));
   const modalTitleRef = useRef(null);
 
-  const selectedLog = logId ? logs.findIndex((log) => log.id === logId) : null;
-  const isModalOpen = selectedLog !== null && selectedLog !== -1;
+  const selectedPost = postId
+    ? posts.findIndex((post) => post.id === postId)
+    : null;
+  const isModalOpen = selectedPost !== null && selectedPost !== -1;
 
   const overflowRefs = useMemo(
     () => [
-      ...logs.map((_, index) => ({
+      ...posts.map((_, index) => ({
         key: `title-${index}`,
         ref: titleRefs[index],
       })),
       { key: "modal-title", ref: modalTitleRef },
     ],
-    [titleRefs, modalTitleRef],
+    [titleRefs, modalTitleRef]
   );
 
-  const overflowStates = useTextOverflow(overflowRefs, [selectedLog]);
+  const overflowStates = useTextOverflow(overflowRefs, [selectedPost]);
 
   useEffect(() => {
     let isMounted = true;
@@ -45,11 +48,11 @@ function Changelog() {
     }
 
     const loadContent = async () => {
-      const currentLog = logs[selectedLog];
+      const currentPost = posts[selectedPost];
       setIsLoadingContent(true);
 
       try {
-        const content = await loadLogContent(currentLog.id);
+        const content = await loadBlogContent(currentPost.id);
 
         if (!isMounted) {
           return;
@@ -61,7 +64,7 @@ function Changelog() {
           return;
         }
 
-        setSelectedContent("Não foi possível carregar este changelog.");
+        setSelectedContent("Não foi possível carregar este post.");
       } finally {
         if (isMounted) {
           setIsLoadingContent(false);
@@ -74,49 +77,65 @@ function Changelog() {
     return () => {
       isMounted = false;
     };
-  }, [selectedLog, isModalOpen]);
+  }, [selectedPost, isModalOpen]);
 
-  const handleLogClick = (index) => {
-    navigate(`/changelog/${logs[index].id}`);
+  const handlePostClick = (index) => {
+    navigate(`/blog/${posts[index].id}`);
   };
 
   const handleCloseModal = () => {
-    navigate("/changelog");
+    navigate("/blog");
   };
 
   return (
     <>
       <Standalone>
-        <div className="posts">
-          {logs.map((log, index) => {
+        <div className="blog-posts">
+          {posts.map((post, index) => {
             const isOverflowing = overflowStates[`title-${index}`];
 
             return (
               <button
-                className="post"
+                className={`blog-post ${post.cover ? "has-cover" : ""}`}
                 key={index}
-                onClick={() => handleLogClick(index)}
+                onClick={() => handlePostClick(index)}
               >
-                <div className="header">
-                  <div
-                    className={`header-title ${
-                      isOverflowing ? "is-overflowing" : ""
-                    }`}
-                    ref={(el) => {
-                      titleRefs[index].current = el;
-                    }}
-                  >
-                    <div className="header-title-content">
-                      <h2>{log.title}</h2>
-                      <span className="header-version">{log.version}</span>
-                    </div>
+                {post.cover ? (
+                  <div className="blog-post-cover" aria-hidden="true">
+                    <img
+                      className="blog-post-cover-img"
+                      src={post.cover}
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
-                  <span className="header-date">
-                    <p>{log.date}</p>
-                  </span>
-                </div>
-                <div className="description">
-                  <p>{log.description}</p>
+                ) : null}
+
+                <div className="blog-post-body">
+                  <div className="blog-header">
+                    <div
+                      className={`blog-header-title ${
+                        isOverflowing ? "is-overflowing" : ""
+                      }`}
+                      ref={(el) => {
+                        titleRefs[index].current = el;
+                      }}
+                    >
+                      <div className="blog-header-title-content">
+                        <h2>{post.title}</h2>
+                        <span className="blog-header-version">
+                          {post.version}
+                        </span>
+                      </div>
+                    </div>
+                    <span className="blog-header-date">
+                      <p>{post.date}</p>
+                    </span>
+                  </div>
+
+                  <div className="blog-description">
+                    <p>{post.description}</p>
+                  </div>
                 </div>
               </button>
             );
@@ -139,19 +158,19 @@ function Changelog() {
                 ref={modalTitleRef}
               >
                 <div className="modal-header-title-content">
-                  <h2>{logs[selectedLog].title}</h2>
+                  <h2>{posts[selectedPost].title}</h2>
                   <span className="modal-header-version">
-                    {logs[selectedLog].version}
+                    {posts[selectedPost].version}
                   </span>
                 </div>
               </div>
               <span className="modal-header-date">
-                {logs[selectedLog].date}
+                {posts[selectedPost].date}
               </span>
             </div>
 
             {isLoadingContent ? (
-              <p>Carregando changelog...</p>
+              <p>Carregando blog...</p>
             ) : (
               <Suspense fallback={<p>Carregando renderização...</p>}>
                 <MarkdownRenderer
@@ -167,4 +186,4 @@ function Changelog() {
   );
 }
 
-export default Changelog;
+export default Blog;

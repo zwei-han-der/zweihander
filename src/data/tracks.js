@@ -1,7 +1,7 @@
-import diamanteslagrimaserostosparaesquecer from "../assets/images/diamantes-lagrimas-e-rostos-para-esquecer.jpg";
-import abaixodoradar from "../assets/images/abaixo-do-radar.jpg";
-import chromakopia from "../assets/images/chromakopia.jpg";
-import produtodoambiente from "../assets/images/produto-do-ambiente.jpg";
+import diamanteslagrimaserostosparaesquecer from "../assets/images/album-covers/diamantes-lagrimas-e-rostos-para-esquecer.jpg";
+import abaixodoradar from "../assets/images/album-covers/abaixo-do-radar.jpg";
+import chromakopia from "../assets/images/album-covers/chromakopia.jpg";
+import produtodoambiente from "../assets/images/album-covers/produto-do-ambiente.jpg";
 
 export const trackList = [
   {
