@@ -15,8 +15,8 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 700,
     rolldownOptions: {
-      codeSplitting: true,
       output: {
+        codeSplitting: true,
         manualChunks(id) {
           if (markdownDeps.some((dep) => id.includes(dep))) {
             return "markdown";
