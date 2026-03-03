@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX19LcSnwbIxtZttdwANOphDY: () => import("./v1.2.1.md?raw"),
   U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX: () => import("./v1.2.0.md?raw"),
   U2FsdGVkX19UopSScWDJRvxRzh6ANhVP: () => import("./v1.1.0.md?raw"),
   U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc: () => import("./v1.0.1.md?raw"),
@@ -16,6 +17,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX19LcSnwbIxtZttdwANOphDY",
+    title: "unificação",
+    version: "changelog #11 - v1.2.1",
+    date: "03/03/2026",
+    description:
+      "Centralização dos estilos do modal, remoção de acoplamento no Blog e ajuste de responsividade em telas pequenas.",
+  },
   {
     id: "U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX",
     title: "carregando título...",
