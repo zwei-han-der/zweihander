@@ -4,9 +4,9 @@ import { themes } from "./data/themes";
 
 const Home = lazy(() => import("./pages/Home"));
 const Changelog = lazy(() => import("./pages/Changelog"));
+const Blog = lazy(() => import("./pages/Blog"));
 const Videos = lazy(() => import("./pages/Videos"));
 const Bookmarks = lazy(() => import("./pages/Bookmarks"));
-const Profile = lazy(() => import("./pages/Profile"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
@@ -27,9 +27,12 @@ function App() {
             <Route index element={<Changelog />} />
             <Route path=":logId" element={<Changelog />} />
           </Route>
+          <Route path="/blog">
+            <Route index element={<Blog />} />
+            <Route path=":postId" element={<Blog />} />
+          </Route>
           <Route path="/videos" element={<Videos />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </Suspense>
