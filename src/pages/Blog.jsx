@@ -5,7 +5,6 @@ import Modal from "../components/Modal";
 import useTextOverflow from "../utils/useTextOverflow";
 import { posts, loadBlogContent } from "../data/blog/index";
 import "../styles/pages.Blog.css";
-import "../styles/pages.Changelog.css";
 
 const MarkdownRenderer = lazy(() => import("../components/MarkdownRenderer"));
 
