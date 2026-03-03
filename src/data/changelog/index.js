@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX: () => import("./v1.2.0.md?raw"),
   U2FsdGVkX19UopSScWDJRvxRzh6ANhVP: () => import("./v1.1.0.md?raw"),
   U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc: () => import("./v1.0.1.md?raw"),
   U2FsdGVkX190LnCf80wWGpZjhZeb2Um5: () => import("./v1.0.0.md?raw"),
@@ -15,6 +16,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX",
+    title: "carregando título...",
+    version: "changelog #10 - v1.2.0",
+    date: "03/03/2026",
+    description:
+      "Mudanças buscando uma melhor performance com Route-based Code Splitting e Lazy Loading.",
+  },
   {
     id: "U2FsdGVkX19UopSScWDJRvxRzh6ANhVP",
     title: "responsividade é o inferno na terra",
