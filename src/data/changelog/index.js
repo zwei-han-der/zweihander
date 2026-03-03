@@ -1,7 +1,6 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
-  U2FsdGVkX18BN4Sch4PRgb1obNas3BsT: () => import("./todo.md?raw"),
   U2FsdGVkX19UopSScWDJRvxRzh6ANhVP: () => import("./v1.1.0.md?raw"),
   U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc: () => import("./v1.0.1.md?raw"),
   U2FsdGVkX190LnCf80wWGpZjhZeb2Um5: () => import("./v1.0.0.md?raw"),
@@ -16,14 +15,6 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
-  {
-    id: "U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
-    title: "lista de afazeres",
-    version: "fixado",
-    date: "27/02/2026",
-    description:
-      "Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site.",
-  },
   {
     id: "U2FsdGVkX19UopSScWDJRvxRzh6ANhVP",
     title: "responsividade é o inferno na terra",
