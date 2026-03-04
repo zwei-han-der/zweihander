@@ -25,7 +25,7 @@ export const posts = [
     title: "markdown preview",
     version: "",
     date: "27/02/2026",
-    description: "Visualização do estilo do markdown.",
+    description: "Visualização do Markdown e HTML.",
     cover: bath,
   },
 ];
