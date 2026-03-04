@@ -126,7 +126,7 @@ function MarkdownRenderer({ content, className = "" }) {
           img: ({ src, alt, title }) => (
             <img className="md-img" src={src} alt={alt} title={title} />
           ),
-          input: ({ props }) => <MarkdownInput {...props} />,
+          input: (props) => <MarkdownInput {...props} />,
           hr: ({ ...props }) => <hr className="md-hr" {...props} />,
         }}
       >
