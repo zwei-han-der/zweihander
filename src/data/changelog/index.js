@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf: () => import("./v1.3.0.md?raw"),
   U2FsdGVkX19LcSnwbIxtZttdwANOphDY: () => import("./v1.2.1.md?raw"),
   U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX: () => import("./v1.2.0.md?raw"),
   U2FsdGVkX19UopSScWDJRvxRzh6ANhVP: () => import("./v1.1.0.md?raw"),
@@ -17,6 +18,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf",
+    title: "HTMLification",
+    version: "changelog #12 - v1.3.0",
+    date: "04/03/2026",
+    description:
+      "Adicionado parser HTML ao MarkdownRenderer.",
+  },
   {
     id: "U2FsdGVkX19LcSnwbIxtZttdwANOphDY",
     title: "unificação",
