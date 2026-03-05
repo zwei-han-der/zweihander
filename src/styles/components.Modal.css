@@ -83,12 +83,120 @@
   height: 1.25rem;
 }
 
+.changelog-modal {
+  overflow-y: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.changelog-modal-content {
+  width: 100%;
+  min-height: 462px;
+  max-height: 462px;
+  padding: 1.5rem;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+
+.changelog-modal-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.5;
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+.changelog-modal .modal-header-title {
+  font-weight: 600;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.changelog-modal .modal-header-title-content {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.changelog-modal .modal-header-title:not(.is-overflowing) .modal-header-title-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.changelog-modal .modal-header-title h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.changelog-modal .modal-header-title.is-overflowing:hover .modal-header-title-content {
+  animation: modal-marquee-slide 5s ease-in-out infinite;
+}
+
+.changelog-modal .modal-header-version {
+  font-style: italic;
+  text-transform: uppercase;
+  color: #fafafa99;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.changelog-modal .modal-header-date {
+  padding-left: 0.1rem;
+  color: #fafafa99;
+  flex-shrink: 0;
+  min-width: max(80px, 5%);
+  text-align: right;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+@keyframes modal-marquee-slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  45%,
+  55% {
+    transform: translateX(-50%);
+  }
+
+  90%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .changelog-modal .modal-header-version {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .modal-overlay {
     padding: 1.5rem;
   }
 
   .modal-content {
+    padding: 1.25rem;
+  }
+
+  .changelog-modal-content {
+    min-height: 400px;
+    max-height: 90vh;
     padding: 1.25rem;
   }
 }
@@ -114,6 +222,24 @@
     width: 1.1rem;
     height: 1.1rem;
   }
+
+  .changelog-modal-content {
+    min-height: 400px;
+    max-height: 90vh;
+    padding: 1.25rem;
+  }
+
+  .changelog-modal .modal-header-title h2 {
+    font-size: 1.75rem;
+  }
+
+  .changelog-modal .modal-header-date {
+    min-width: 70px;
+  }
+
+  .changelog-modal .modal-header-version {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -136,6 +262,24 @@
   .modal-close svg {
     width: 1rem;
     height: 1rem;
+  }
+
+  .changelog-modal-content {
+    min-height: 350px;
+    max-height: 90vh;
+    padding: 1rem;
+  }
+
+  .changelog-modal .modal-header-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .changelog-modal .modal-header-date {
+    min-width: 60px;
+  }
+
+  .changelog-modal .modal-header-version {
+    display: none;
   }
 }
 
@@ -160,6 +304,34 @@
     width: 0.9rem;
     height: 0.9rem;
   }
+
+  .changelog-modal-content {
+    min-height: 300px;
+    max-height: 90vh;
+    padding: 0.875rem;
+  }
+
+  .changelog-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .changelog-modal .modal-header-title {
+    width: 100%;
+  }
+
+  .changelog-modal .modal-header-title h2 {
+    font-size: 1.25rem;
+  }
+
+  .changelog-modal .modal-header-date {
+    display: none;
+    text-align: left;
+  }
+
+  .changelog-modal .modal-header-version {
+    display: none;
+  }
 }
 
 @media (max-width: 360px) {
@@ -171,5 +343,15 @@
   .modal-close {
     width: 1.75rem;
     height: 1.75rem;
+  }
+
+  .changelog-modal-content {
+    min-height: 280px;
+    height: 100%;
+    max-height: 90vh;
+  }
+
+  .changelog-modal .modal-header-title h2 {
+    font-size: 1.1rem;
   }
 }

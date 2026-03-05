@@ -78,7 +78,7 @@ function Blog() {
     };
   }, [selectedPost, isModalOpen]);
 
-  const handleLogClick = (index) => {
+  const handlePostClick = (index) => {
     navigate(`/blog/${posts[index].id}`);
   };
 
@@ -90,20 +90,20 @@ function Blog() {
     <>
       <Standalone>
         <div className="blog-posts">
-          {posts.map((log, index) => {
+          {posts.map((post, index) => {
             const isOverflowing = overflowStates[`title-${index}`];
 
             return (
               <button
-                className={`blog-post ${log.cover ? "has-cover" : ""}`}
+                className={`blog-post ${post.cover ? "has-cover" : ""}`}
                 key={index}
-                onClick={() => handleLogClick(index)}
+                onClick={() => handlePostClick(index)}
               >
-                {log.cover ? (
+                {post.cover ? (
                   <div className="blog-post-cover" aria-hidden="true">
                     <img
                       className="blog-post-cover-img"
-                      src={log.cover}
+                      src={post.cover}
                       alt=""
                       loading="lazy"
                     />
@@ -121,19 +121,19 @@ function Blog() {
                       }}
                     >
                       <div className="blog-header-title-content">
-                        <h2>{log.title}</h2>
+                        <h2>{post.title}</h2>
                         <span className="blog-header-version">
-                          {log.version}
+                          {post.version}
                         </span>
                       </div>
                     </div>
                     <span className="blog-header-date">
-                      <p>{log.date}</p>
+                      <p>{post.date}</p>
                     </span>
                   </div>
 
                   <div className="blog-description">
-                    <p>{log.description}</p>
+                    <p>{post.description}</p>
                   </div>
                 </div>
               </button>
