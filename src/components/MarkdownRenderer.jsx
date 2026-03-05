@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import LinkPreview from "./LinkPreview";
 import "../styles/components.MarkdownRenderer.css";
 
 function MarkdownInput(props) {
@@ -51,13 +52,16 @@ function MarkdownRenderer({ content, className = "" }) {
           ul: ({ ...props }) => <ul className="md-ul" {...props} />,
           ol: ({ ...props }) => <ol className="md-ol" {...props} />,
           li: ({ ...props }) => <li className="md-li" {...props} />,
-          a: ({ ...props }) => (
-            <a
-              className="md-link"
-              {...props}
-              target="_blank"
-              rel="noopener noreferrer"
-            />
+          a: ({ href, ...props }) => (
+            <LinkPreview href={href}>
+              <a
+                className="md-link"
+                href={href}
+                {...props}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            </LinkPreview>
           ),
           blockquote: ({ ...props }) => (
             <blockquote className="md-blockquote" {...props} />
