@@ -287,6 +287,24 @@ function decodeHtmlEntities(value) {
     .trim() || null;
 }
 
+function sanitizeMetadataText(value) {
+  if (!value) {
+    return null;
+  }
+
+  const normalized = String(value).replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return null;
+  }
+
+  // Reject placeholder-like values that should not be shown in previews.
+  if (/^(\.{3}|…+|[-_]+)$/u.test(normalized)) {
+    return null;
+  }
+
+  return normalized;
+}
+
 function getMetaTagContent(html, descriptors) {
   for (const descriptor of descriptors) {
     const escaped = descriptor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -391,14 +409,16 @@ async function fetchLinkMetadata(url) {
 
     const html = await response.text();
 
-    const title =
+    const titleRaw =
       getMetaTagContent(html, ["og:title", "twitter:title"]) ||
       getTitleFromHtml(html);
-    const description = getMetaTagContent(html, [
+    const descriptionRaw = getMetaTagContent(html, [
       "og:description",
       "twitter:description",
       "description",
     ]);
+    const title = sanitizeMetadataText(titleRaw);
+    const description = sanitizeMetadataText(descriptionRaw);
     const image = resolveMaybeRelativeUrl(
       getMetaTagContent(html, ["og:image", "twitter:image"]),
       finalUrl,

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-05T14:43:22.420Z",
+  "generatedAt": "2026-03-05T14:46:23.071Z",
   "summary": {
     "totalDiscovered": 24,
     "uniqueUrls": 16,
     "ok": 8,
     "failed": 2,
     "skipped": 6,
-    "durationMs": 1603
+    "durationMs": 768
   },
   "links": [
     {
@@ -27,7 +27,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.617Z",
+      "fetchedAt": "2026-03-05T14:46:23.051Z",
       "error": null,
       "sourceRefs": [
         {
@@ -55,7 +55,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/blog/markdown-showcase",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.617Z",
+      "fetchedAt": "2026-03-05T14:46:23.071Z",
       "error": null,
       "sourceRefs": [
         {
@@ -83,7 +83,7 @@
       "favicon": null,
       "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-05T14:43:21.029Z",
+      "fetchedAt": "2026-03-05T14:46:22.468Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -114,7 +114,7 @@
       "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
       "finalUrl": "https://deadsimplesites.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.139Z",
+      "fetchedAt": "2026-03-05T14:46:22.570Z",
       "error": null,
       "sourceRefs": [
         {
@@ -142,7 +142,7 @@
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:22.420Z",
+      "fetchedAt": "2026-03-05T14:46:22.559Z",
       "error": null,
       "sourceRefs": [
         {
@@ -404,7 +404,7 @@
       "favicon": "https://filegarden.com/images/icon.svg",
       "finalUrl": "https://filegarden.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.332Z",
+      "fetchedAt": "2026-03-05T14:46:22.772Z",
       "error": null,
       "sourceRefs": [
         {
@@ -432,7 +432,7 @@
       "favicon": "https://gradienty.codes/favicon.ico",
       "finalUrl": "https://gradienty.codes/mesh-gradients",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.520Z",
+      "fetchedAt": "2026-03-05T14:46:22.665Z",
       "error": null,
       "sourceRefs": [
         {
@@ -460,7 +460,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.462Z",
+      "fetchedAt": "2026-03-05T14:46:22.696Z",
       "error": null,
       "sourceRefs": [
         {
@@ -488,7 +488,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-05T14:43:21.723Z",
+      "fetchedAt": "2026-03-05T14:46:22.969Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -519,7 +519,7 @@
       "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
       "finalUrl": "https://ui.glass/generator",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T14:43:21.796Z",
+      "fetchedAt": "2026-03-05T14:46:22.945Z",
       "error": null,
       "sourceRefs": [
         {
