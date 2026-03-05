@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import LinkPreview from "./LinkPreview";
+import rehypeRaw from "rehype-raw";
 import "../styles/components.MarkdownRenderer.css";
 
 function MarkdownInput(props) {
@@ -24,7 +25,7 @@ function MarkdownRenderer({ content, className = "" }) {
     <div className={`markdown-content ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight]}
+        rehypePlugins={[rehypeHighlight, rehypeRaw]}
         components={{
           h1: ({ ...props }) => <h1 className="md-h1" {...props} />,
           h2: ({ ...props }) => <h2 className="md-h2" {...props} />,
@@ -130,6 +131,7 @@ function MarkdownRenderer({ content, className = "" }) {
             <img className="md-img" src={src} alt={alt} title={title} />
           ),
           input: (props) => <MarkdownInput {...props} />,
+          hr: ({ ...props }) => <hr className="md-hr" {...props} />,
         }}
       >
         {content}
