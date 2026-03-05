@@ -3,6 +3,8 @@ import { createPortal } from "react-dom";
 import { getLinkMetadataByHref } from "../utils/linkMetadata";
 import "../styles/components.LinkPreview.css";
 
+const imageVariantCache = new Map();
+
 function getViewportAwarePosition(anchorRect, tooltipWidth = 320, tooltipHeight = 180) {
   const spacing = 12;
   const viewportWidth = window.innerWidth;
@@ -24,7 +26,7 @@ function getViewportAwarePosition(anchorRect, tooltipWidth = 320, tooltipHeight 
   return { top, left };
 }
 
-function LinkPreviewTooltip({ metadata, anchorRect, tooltipId }) {
+function LinkPreviewTooltip({ metadata, anchorRect, tooltipId, thumbVariant, onThumbLoad }) {
   const style = useMemo(() => {
     if (!anchorRect) {
       return { visibility: "hidden" };
@@ -46,8 +48,19 @@ function LinkPreviewTooltip({ metadata, anchorRect, tooltipId }) {
       style={style}
     >
       {metadata.image ? (
-        <div className="link-preview-thumb-wrap" aria-hidden="true">
-          <img className="link-preview-thumb" src={metadata.image} alt="" loading="lazy" />
+        <div
+          className={`link-preview-thumb-wrap ${
+            thumbVariant === "wide" ? "is-wide" : ""
+          }`}
+          aria-hidden="true"
+        >
+          <img
+            className="link-preview-thumb"
+            src={metadata.image}
+            alt=""
+            loading="lazy"
+            onLoad={onThumbLoad}
+          />
         </div>
       ) : null}
 
@@ -68,6 +81,7 @@ function LinkPreview({ href, children }) {
   const [isActive, setIsActive] = useState(false);
   const [anchorRect, setAnchorRect] = useState(null);
   const [metadata, setMetadata] = useState(null);
+  const [thumbVariant, setThumbVariant] = useState("default");
   const [canHover, setCanHover] = useState(false);
   const tooltipId = useMemo(
     () => `link-preview-${Math.random().toString(36).slice(2, 10)}`,
@@ -80,6 +94,15 @@ function LinkPreview({ href, children }) {
     }
 
     setAnchorRect(wrapperRef.current.getBoundingClientRect());
+  };
+
+  const resolveVariantFromRatio = (ratio) => {
+    if (!ratio || !Number.isFinite(ratio)) {
+      return "default";
+    }
+
+    const isSquare = ratio >= 0.95 && ratio <= 1.05;
+    return isSquare ? "default" : "wide";
   };
 
   useEffect(() => {
@@ -134,6 +157,56 @@ function LinkPreview({ href, children }) {
       active = false;
     };
   }, [isActive, canHover, href, metadata]);
+
+  useEffect(() => {
+    if (!metadata?.image) {
+      setThumbVariant("default");
+      return;
+    }
+
+    if (metadata.imageShape === "non_square") {
+      setThumbVariant("wide");
+      imageVariantCache.set(metadata.image, "wide");
+      return;
+    }
+
+    if (metadata.imageShape === "square") {
+      setThumbVariant("default");
+      imageVariantCache.set(metadata.image, "default");
+      return;
+    }
+
+    if (metadata.imageAspectRatio) {
+      const resolved = resolveVariantFromRatio(metadata.imageAspectRatio);
+      setThumbVariant(resolved);
+      imageVariantCache.set(metadata.image, resolved);
+      return;
+    }
+
+    const cachedVariant = imageVariantCache.get(metadata.image);
+    if (cachedVariant) {
+      setThumbVariant(cachedVariant);
+      return;
+    }
+
+    setThumbVariant("default");
+  }, [metadata]);
+
+  const handleThumbLoad = (event) => {
+    if (!metadata?.image || metadata?.imageShape) {
+      return;
+    }
+
+    const { naturalWidth, naturalHeight } = event.currentTarget;
+    if (!naturalWidth || !naturalHeight) {
+      return;
+    }
+
+    const ratio = naturalWidth / naturalHeight;
+    const resolved = resolveVariantFromRatio(ratio);
+    imageVariantCache.set(metadata.image, resolved);
+    setThumbVariant(resolved);
+  };
 
   useEffect(() => {
     if (!isActive || !metadata) {
@@ -213,6 +286,8 @@ function LinkPreview({ href, children }) {
           metadata={metadata}
           anchorRect={anchorRect}
           tooltipId={tooltipId}
+          thumbVariant={thumbVariant}
+          onThumbLoad={handleThumbLoad}
         />
       ) : null}
     </span>
