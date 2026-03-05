@@ -1,15 +1,71 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-05T13:46:21.661Z",
+  "generatedAt": "2026-03-05T14:43:22.420Z",
   "summary": {
-    "totalDiscovered": 13,
-    "uniqueUrls": 10,
-    "ok": 5,
-    "failed": 1,
-    "skipped": 4,
-    "durationMs": 465
+    "totalDiscovered": 24,
+    "uniqueUrls": 16,
+    "ok": 8,
+    "failed": 2,
+    "skipped": 6,
+    "durationMs": 1603
   },
   "links": [
+    {
+      "url": "https://blackspace.lol/",
+      "normalizedUrl": "https://blackspace.lol/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "blackspace",
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "blackspace.lol",
+      "favicon": null,
+      "finalUrl": "https://blackspace.lol/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T14:43:21.617Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/markdown.md",
+          "line": 87,
+          "kind": "markdown_inline",
+          "label": "Ashlyn"
+        }
+      ]
+    },
+    {
+      "url": "https://blackspace.lol/blog/markdown-showcase",
+      "normalizedUrl": "https://blackspace.lol/blog/markdown-showcase",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Markdown Showcase",
+      "description": "10/1/2025",
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "blackspace.lol",
+      "favicon": null,
+      "finalUrl": "https://blackspace.lol/blog/markdown-showcase",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T14:43:21.617Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/markdown.md",
+          "line": 87,
+          "kind": "markdown_inline",
+          "label": "markdown showcase"
+        }
+      ]
+    },
     {
       "url": "https://codepen.io/jinsouls/pen/WNYRogj",
       "normalizedUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
@@ -19,11 +75,15 @@
       "title": null,
       "description": null,
       "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": null,
       "favicon": null,
       "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-05T13:46:21.381Z",
+      "fetchedAt": "2026-03-05T14:43:21.029Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -46,11 +106,15 @@
       "title": "Dead Simple Sites — Minimal Web Design Inspiration & Gallery",
       "description": "A curated gallery of the most minimal, clean websites on the internet. No animations, no scroll jacking — just pure, simple web design inspiration. Updated weekly.",
       "image": "https://deadsimplesites.com/opengraph-image.png?66bb510859eae437",
+      "imageWidth": 1800,
+      "imageHeight": 945,
+      "imageAspectRatio": 1.9048,
+      "imageShape": "non_square",
       "siteName": "Dead Simple Sites",
       "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
       "finalUrl": "https://deadsimplesites.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T13:46:21.472Z",
+      "fetchedAt": "2026-03-05T14:43:21.139Z",
       "error": null,
       "sourceRefs": [
         {
@@ -70,11 +134,15 @@
       "title": "Detail · Where craft lives",
       "description": "A curated study of the tiny design decisions that make products feel exceptional in AI era. For designers and engineers who believe the small things can make big difference.",
       "image": "https://detail.design/og.png",
+      "imageWidth": 1200,
+      "imageHeight": 630,
+      "imageAspectRatio": 1.9048,
+      "imageShape": "non_square",
       "siteName": "Detail",
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T13:46:21.474Z",
+      "fetchedAt": "2026-03-05T14:43:22.420Z",
       "error": null,
       "sourceRefs": [
         {
@@ -94,6 +162,47 @@
       "title": null,
       "description": null,
       "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/markdown.md",
+          "line": 21,
+          "kind": "markdown_inline",
+          "label": "Texto com link"
+        },
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 6,
+          "kind": "markdown_inline",
+          "label": "Home"
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/blog",
+      "normalizedUrl": "https://example.local/zweihander/blog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": null,
       "favicon": null,
       "finalUrl": null,
@@ -106,9 +215,58 @@
       "sourceRefs": [
         {
           "file": "src/data/blog/todo.md",
-          "line": 8,
+          "line": 18,
           "kind": "markdown_inline",
-          "label": "Home"
+          "label": "Blog"
+        },
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 19,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        },
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 10,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        },
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 19,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "normalizedUrl": "https://example.local/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 19,
+          "kind": "markdown_inline",
+          "label": "Lista de afazeres"
         }
       ]
     },
@@ -121,6 +279,10 @@
       "title": null,
       "description": null,
       "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": null,
       "favicon": null,
       "finalUrl": null,
@@ -133,7 +295,7 @@
       "sourceRefs": [
         {
           "file": "src/data/blog/todo.md",
-          "line": 15,
+          "line": 13,
           "kind": "markdown_inline",
           "label": "Bookmarks"
         },
@@ -154,6 +316,10 @@
       "title": null,
       "description": null,
       "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": null,
       "favicon": null,
       "finalUrl": null,
@@ -164,6 +330,12 @@
         "message": "internal_link"
       },
       "sourceRefs": [
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 18,
+          "kind": "markdown_inline",
+          "label": "Changelog"
+        },
         {
           "file": "src/data/blog/todo.md",
           "line": 23,
@@ -187,6 +359,10 @@
       "title": null,
       "description": null,
       "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": null,
       "favicon": null,
       "finalUrl": null,
@@ -220,11 +396,15 @@
       "title": "File Garden",
       "description": "Host your files with decency.",
       "image": "https://filegarden.com/images/icon.png",
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": "File Garden",
       "favicon": "https://filegarden.com/images/icon.svg",
       "finalUrl": "https://filegarden.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T13:46:21.594Z",
+      "fetchedAt": "2026-03-05T14:43:21.332Z",
       "error": null,
       "sourceRefs": [
         {
@@ -244,11 +424,15 @@
       "title": "Mesh Gradient Generator",
       "description": "Create stunning mesh gradients for your designs",
       "image": "https://gradienty.codes/_next/static/media/mesh.24ba7ade.svg",
+      "imageWidth": 800,
+      "imageHeight": 400,
+      "imageAspectRatio": 2,
+      "imageShape": "non_square",
       "siteName": "gradienty.codes",
       "favicon": "https://gradienty.codes/favicon.ico",
       "finalUrl": "https://gradienty.codes/mesh-gradients",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T13:46:21.393Z",
+      "fetchedAt": "2026-03-05T14:43:21.520Z",
       "error": null,
       "sourceRefs": [
         {
@@ -256,6 +440,65 @@
           "line": 45,
           "kind": "jsx_href",
           "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
+      "normalizedUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "i.pinimg.com",
+      "favicon": null,
+      "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T14:43:21.462Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/markdown.md",
+          "line": 42,
+          "kind": "markdown_inline",
+          "label": "Imagem"
+        }
+      ]
+    },
+    {
+      "url": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg \"Imagem com title\"",
+      "normalizedUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
+      "classification": "external_http",
+      "status": "failed",
+      "skipReason": null,
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
+      "httpStatus": 403,
+      "fetchedAt": "2026-03-05T14:43:21.723Z",
+      "error": {
+        "code": "http_error",
+        "message": "HTTP status 403"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/markdown.md",
+          "line": 46,
+          "kind": "markdown_inline",
+          "label": "Imagem"
         }
       ]
     },
@@ -268,11 +511,15 @@
       "title": "Glassmorphism CSS Generator - Glass UI",
       "description": "Generate CSS and HTML components using the glassmorphism design specifications based on the Glass UI library.",
       "image": "https://ui.glass/images/og-image.png",
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
       "siteName": "@zoltanszogyenyi",
       "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
       "finalUrl": "https://ui.glass/generator",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-05T13:46:21.661Z",
+      "fetchedAt": "2026-03-05T14:43:21.796Z",
       "error": null,
       "sourceRefs": [
         {

@@ -304,6 +304,29 @@ function getMetaTagContent(html, descriptors) {
   return null;
 }
 
+function parseMetaDimension(value) {
+  if (!value) {
+    return null;
+  }
+
+  const numeric = Number.parseInt(String(value).trim(), 10);
+  if (!Number.isFinite(numeric) || numeric <= 0) {
+    return null;
+  }
+
+  return numeric;
+}
+
+function getImageShape(width, height) {
+  if (!width || !height) {
+    return null;
+  }
+
+  const ratio = width / height;
+  const isSquare = ratio >= 0.95 && ratio <= 1.05;
+  return isSquare ? "square" : "non_square";
+}
+
 function getTitleFromHtml(html) {
   const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   return decodeHtmlEntities(titleMatch?.[1] ?? null);
@@ -380,6 +403,15 @@ async function fetchLinkMetadata(url) {
       getMetaTagContent(html, ["og:image", "twitter:image"]),
       finalUrl,
     );
+    const imageWidth = parseMetaDimension(
+      getMetaTagContent(html, ["og:image:width", "twitter:image:width"]),
+    );
+    const imageHeight = parseMetaDimension(
+      getMetaTagContent(html, ["og:image:height", "twitter:image:height"]),
+    );
+    const imageAspectRatio =
+      imageWidth && imageHeight ? Number((imageWidth / imageHeight).toFixed(4)) : null;
+    const imageShape = getImageShape(imageWidth, imageHeight);
     const siteName =
       getMetaTagContent(html, ["og:site_name", "twitter:site"]) ||
       (() => {
@@ -396,6 +428,10 @@ async function fetchLinkMetadata(url) {
       title,
       description,
       image,
+      imageWidth,
+      imageHeight,
+      imageAspectRatio,
+      imageShape,
       siteName,
       favicon,
       httpStatus,
@@ -456,6 +492,10 @@ function createInitialRecord(discovery, normalized) {
     title: null,
     description: null,
     image: null,
+    imageWidth: null,
+    imageHeight: null,
+    imageAspectRatio: null,
+    imageShape: null,
     siteName: null,
     favicon: null,
     finalUrl: null,
@@ -570,6 +610,10 @@ async function main() {
     record.title = metadata.title ?? null;
     record.description = metadata.description ?? null;
     record.image = metadata.image ?? null;
+    record.imageWidth = metadata.imageWidth ?? null;
+    record.imageHeight = metadata.imageHeight ?? null;
+    record.imageAspectRatio = metadata.imageAspectRatio ?? null;
+    record.imageShape = metadata.imageShape ?? null;
     record.siteName = metadata.siteName ?? null;
     record.favicon = metadata.favicon ?? null;
     record.finalUrl = metadata.finalUrl ?? null;
