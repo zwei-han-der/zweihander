@@ -69,6 +69,23 @@ function indexMetadata(metadata) {
   return index;
 }
 
+function hasMeaningfulDescription(description) {
+  if (typeof description !== "string") {
+    return false;
+  }
+
+  const normalized = description.replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return false;
+  }
+
+  if (/^(\.{3}|…+|[-_]+)$/u.test(normalized)) {
+    return false;
+  }
+
+  return true;
+}
+
 export async function loadLinkMetadata() {
   if (metadataCache && metadataByUrlCache) {
     return { metadata: metadataCache, byUrl: metadataByUrlCache };
@@ -113,6 +130,11 @@ export async function getLinkMetadataByHref(href) {
   const { byUrl } = await loadLinkMetadata();
   const record = byUrl.get(normalizedUrl);
   if (!record || record.status !== "ok") {
+    return null;
+  }
+
+  // Fallback to plain link when preview lacks a meaningful description.
+  if (!hasMeaningfulDescription(record.description)) {
     return null;
   }
 
