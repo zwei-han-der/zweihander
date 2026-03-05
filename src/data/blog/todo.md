@@ -8,6 +8,7 @@ Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que
 - Adicionar algo de verdade na [Home](/zweihander/)
 - Adicionar aba Playground para projetos web experimentais
 - Adicionar aba Galeria
+- Adicionar rich previews em links do site
 
 ## Em progresso
 

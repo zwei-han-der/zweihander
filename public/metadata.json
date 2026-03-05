@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-03-05T13:46:21.661Z",
+  "summary": {
+    "totalDiscovered": 13,
+    "uniqueUrls": 10,
+    "ok": 5,
+    "failed": 1,
+    "skipped": 4,
+    "durationMs": 465
+  },
+  "links": [
+    {
+      "url": "https://codepen.io/jinsouls/pen/WNYRogj",
+      "normalizedUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
+      "classification": "external_http",
+      "status": "failed",
+      "skipReason": null,
+      "title": null,
+      "description": null,
+      "image": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
+      "httpStatus": 403,
+      "fetchedAt": "2026-03-05T13:46:21.381Z",
+      "error": {
+        "code": "http_error",
+        "message": "HTTP status 403"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 30,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://deadsimplesites.com/",
+      "normalizedUrl": "https://deadsimplesites.com/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Dead Simple Sites — Minimal Web Design Inspiration & Gallery",
+      "description": "A curated gallery of the most minimal, clean websites on the internet. No animations, no scroll jacking — just pure, simple web design inspiration. Updated weekly.",
+      "image": "https://deadsimplesites.com/opengraph-image.png?66bb510859eae437",
+      "siteName": "Dead Simple Sites",
+      "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
+      "finalUrl": "https://deadsimplesites.com/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T13:46:21.472Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 83,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://detail.design/",
+      "normalizedUrl": "https://detail.design/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Detail · Where craft lives",
+      "description": "A curated study of the tiny design decisions that make products feel exceptional in AI era. For designers and engineers who believe the small things can make big difference.",
+      "image": "https://detail.design/og.png",
+      "siteName": "Detail",
+      "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
+      "finalUrl": "https://detail.design/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T13:46:21.474Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 98,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/",
+      "normalizedUrl": "https://example.local/zweihander/",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 8,
+          "kind": "markdown_inline",
+          "label": "Home"
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/bookmarks",
+      "normalizedUrl": "https://example.local/zweihander/bookmarks",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 15,
+          "kind": "markdown_inline",
+          "label": "Bookmarks"
+        },
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 22,
+          "kind": "markdown_inline",
+          "label": "Bookmarks"
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/changelog",
+      "normalizedUrl": "https://example.local/zweihander/changelog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 23,
+          "kind": "markdown_inline",
+          "label": "Changelog"
+        },
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 1,
+          "kind": "markdown_inline",
+          "label": "Changelog"
+        }
+      ]
+    },
+    {
+      "url": "/zweihander/videos",
+      "normalizedUrl": "https://example.local/zweihander/videos",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/blog/todo.md",
+          "line": 24,
+          "kind": "markdown_inline",
+          "label": "Vídeos"
+        },
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 1,
+          "kind": "markdown_inline",
+          "label": "Vídeos"
+        }
+      ]
+    },
+    {
+      "url": "https://filegarden.com/",
+      "normalizedUrl": "https://filegarden.com/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "File Garden",
+      "description": "Host your files with decency.",
+      "image": "https://filegarden.com/images/icon.png",
+      "siteName": "File Garden",
+      "favicon": "https://filegarden.com/images/icon.svg",
+      "finalUrl": "https://filegarden.com/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T13:46:21.594Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 61,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://gradienty.codes/mesh-gradients",
+      "normalizedUrl": "https://gradienty.codes/mesh-gradients",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Mesh Gradient Generator",
+      "description": "Create stunning mesh gradients for your designs",
+      "image": "https://gradienty.codes/_next/static/media/mesh.24ba7ade.svg",
+      "siteName": "gradienty.codes",
+      "favicon": "https://gradienty.codes/favicon.ico",
+      "finalUrl": "https://gradienty.codes/mesh-gradients",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T13:46:21.393Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 45,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://ui.glass/generator/",
+      "normalizedUrl": "https://ui.glass/generator/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Glassmorphism CSS Generator - Glass UI",
+      "description": "Generate CSS and HTML components using the glassmorphism design specifications based on the Glass UI library.",
+      "image": "https://ui.glass/images/og-image.png",
+      "siteName": "@zoltanszogyenyi",
+      "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
+      "finalUrl": "https://ui.glass/generator",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-05T13:46:21.661Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 17,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    }
+  ]
+}
