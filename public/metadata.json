@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-07T07:12:42.613Z",
+  "generatedAt": "2026-03-07T19:11:58.598Z",
   "summary": {
     "totalDiscovered": 24,
-    "uniqueUrls": 16,
+    "uniqueUrls": 19,
     "ok": 8,
     "failed": 2,
-    "skipped": 6,
-    "durationMs": 549
+    "skipped": 9,
+    "durationMs": 550
   },
   "links": [
     {
@@ -27,7 +27,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.392Z",
+      "fetchedAt": "2026-03-07T19:11:58.366Z",
       "error": null,
       "sourceRefs": [
         {
@@ -55,7 +55,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/blog/markdown-showcase",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.401Z",
+      "fetchedAt": "2026-03-07T19:11:58.366Z",
       "error": null,
       "sourceRefs": [
         {
@@ -83,7 +83,7 @@
       "favicon": null,
       "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-07T07:12:42.225Z",
+      "fetchedAt": "2026-03-07T19:11:58.191Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -114,7 +114,7 @@
       "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
       "finalUrl": "https://deadsimplesites.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.266Z",
+      "fetchedAt": "2026-03-07T19:11:58.224Z",
       "error": null,
       "sourceRefs": [
         {
@@ -142,7 +142,7 @@
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.298Z",
+      "fetchedAt": "2026-03-07T19:11:58.255Z",
       "error": null,
       "sourceRefs": [
         {
@@ -150,6 +150,136 @@
           "line": 98,
           "kind": "jsx_href",
           "label": null
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "normalizedUrl": "https://example.local/blog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 9,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        },
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 18,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        }
+      ]
+    },
+    {
+      "url": "/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "normalizedUrl": "https://example.local/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 18,
+          "kind": "markdown_inline",
+          "label": "Lista de afazeres"
+        }
+      ]
+    },
+    {
+      "url": "/changelog",
+      "normalizedUrl": "https://example.local/changelog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 5,
+          "kind": "markdown_inline",
+          "label": "Changelog"
+        }
+      ]
+    },
+    {
+      "url": "/videos",
+      "normalizedUrl": "https://example.local/videos",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 5,
+          "kind": "markdown_inline",
+          "label": "Vídeos"
         }
       ]
     },
@@ -224,49 +354,6 @@
           "line": 19,
           "kind": "markdown_inline",
           "label": "Blog"
-        },
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 10,
-          "kind": "markdown_inline",
-          "label": "Blog"
-        },
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 19,
-          "kind": "markdown_inline",
-          "label": "Blog"
-        }
-      ]
-    },
-    {
-      "url": "/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
-      "normalizedUrl": "https://example.local/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
-      "classification": "internal_app",
-      "status": "skipped",
-      "skipReason": "internal_link",
-      "title": null,
-      "description": null,
-      "image": null,
-      "imageWidth": null,
-      "imageHeight": null,
-      "imageAspectRatio": null,
-      "imageShape": null,
-      "siteName": null,
-      "favicon": null,
-      "finalUrl": null,
-      "httpStatus": null,
-      "fetchedAt": null,
-      "error": {
-        "code": "unsupported_url",
-        "message": "internal_link"
-      },
-      "sourceRefs": [
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 19,
-          "kind": "markdown_inline",
-          "label": "Lista de afazeres"
         }
       ]
     },
@@ -341,12 +428,6 @@
           "line": 23,
           "kind": "markdown_inline",
           "label": "Changelog"
-        },
-        {
-          "file": "src/data/changelog/v1.0.1.md",
-          "line": 1,
-          "kind": "markdown_inline",
-          "label": "Changelog"
         }
       ]
     },
@@ -378,12 +459,6 @@
           "line": 24,
           "kind": "markdown_inline",
           "label": "Vídeos"
-        },
-        {
-          "file": "src/data/changelog/v1.0.1.md",
-          "line": 1,
-          "kind": "markdown_inline",
-          "label": "Vídeos"
         }
       ]
     },
@@ -404,7 +479,7 @@
       "favicon": "https://filegarden.com/images/icon.svg",
       "finalUrl": "https://filegarden.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.425Z",
+      "fetchedAt": "2026-03-07T19:11:58.392Z",
       "error": null,
       "sourceRefs": [
         {
@@ -432,7 +507,7 @@
       "favicon": "https://gradienty.codes/favicon.ico",
       "finalUrl": "https://gradienty.codes/mesh-gradients",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.394Z",
+      "fetchedAt": "2026-03-07T19:11:58.340Z",
       "error": null,
       "sourceRefs": [
         {
@@ -460,7 +535,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.368Z",
+      "fetchedAt": "2026-03-07T19:11:58.321Z",
       "error": null,
       "sourceRefs": [
         {
@@ -488,7 +563,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-07T07:12:42.613Z",
+      "fetchedAt": "2026-03-07T19:11:58.598Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -519,7 +594,7 @@
       "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
       "finalUrl": "https://ui.glass/generator",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.576Z",
+      "fetchedAt": "2026-03-07T19:11:58.527Z",
       "error": null,
       "sourceRefs": [
         {
