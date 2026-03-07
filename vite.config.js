@@ -11,7 +11,7 @@ const markdownDeps = [
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/zweihander",
+  base: "/",
   build: {
     chunkSizeWarningLimit: 700,
     rolldownOptions: {
