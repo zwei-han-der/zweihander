@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/zweihander">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
