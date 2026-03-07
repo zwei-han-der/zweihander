@@ -20,7 +20,7 @@ function useMusicPlayer() {
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 0.2;
+      audio.volume = 0.1;
     }
   }, []);
 
