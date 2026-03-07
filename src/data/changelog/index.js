@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy: () => import("./v1.4.1.md?raw"),
   U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt: () => import("./v1.4.0.md?raw"),
   U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf: () => import("./v1.3.0.md?raw"),
   U2FsdGVkX19LcSnwbIxtZttdwANOphDY: () => import("./v1.2.1.md?raw"),
@@ -19,6 +20,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy",
+    title: "favicon camaleao",
+    version: "changelog #14 - v1.4.1",
+    date: "07/03/2026",
+    description:
+      "Favicon agora acompanha o tema ativo e os textos dos changelogs foram padronizados.",
+  },
   {
     id: "U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt",
     title: "links de milhões",
