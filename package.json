@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-link-metadata.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,7 +18,8 @@
     "react-router-dom": "^7.13.1",
     "rehype-highlight": "^7.0.2",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "wrangler": "^4.71.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.3",
@@ -32,7 +34,7 @@
     "@types/bun": "latest"
   },
   "overrides": {
-    "vite": "^8.0.0-beta.13"
+    "vite": "^8.0.0-beta.16"
   },
   "peerDependencies": {
     "typescript": "^5"

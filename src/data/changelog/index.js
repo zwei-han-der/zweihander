@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt: () => import("./v1.4.0.md?raw"),
   U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf: () => import("./v1.3.0.md?raw"),
   U2FsdGVkX19LcSnwbIxtZttdwANOphDY: () => import("./v1.2.1.md?raw"),
   U2FsdGVkX19ejcVgTMZkfDSTe9B8JPeX: () => import("./v1.2.0.md?raw"),
@@ -18,6 +19,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt",
+    title: "links de milhões",
+    version: "changelog #13 - v1.4.0",
+    date: "07/03/2026",
+    description:
+      "Implementação do Link Rich Preview com geração de metadados no prebuild.",
+  },
   {
     id: "U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf",
     title: "HTMLification",
