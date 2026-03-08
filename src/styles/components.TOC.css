@@ -109,7 +109,7 @@
 @media (max-width: 640px) {
   .toc {
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
   }
 
   .standalone-left > .toc {
@@ -124,7 +124,7 @@
 @media (max-width: 480px) {
   .toc {
     padding: 0.875rem;
-    border-radius: 0.75rem;
+    border-radius: 1.25rem;
   }
 
   .standalone-left > .toc {

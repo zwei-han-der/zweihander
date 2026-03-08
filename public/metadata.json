@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-07T07:12:42.613Z",
+  "generatedAt": "2026-03-08T19:26:34.797Z",
   "summary": {
-    "totalDiscovered": 24,
-    "uniqueUrls": 16,
-    "ok": 8,
+    "totalDiscovered": 27,
+    "uniqueUrls": 22,
+    "ok": 10,
     "failed": 2,
-    "skipped": 6,
-    "durationMs": 549
+    "skipped": 10,
+    "durationMs": 1347
   },
   "links": [
     {
@@ -27,7 +27,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.392Z",
+      "fetchedAt": "2026-03-08T19:26:34.240Z",
       "error": null,
       "sourceRefs": [
         {
@@ -55,7 +55,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/blog/markdown-showcase",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.401Z",
+      "fetchedAt": "2026-03-08T19:26:34.244Z",
       "error": null,
       "sourceRefs": [
         {
@@ -83,7 +83,7 @@
       "favicon": null,
       "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-07T07:12:42.225Z",
+      "fetchedAt": "2026-03-08T19:26:33.723Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -91,7 +91,7 @@
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 30,
+          "line": 33,
           "kind": "jsx_href",
           "label": null
         }
@@ -114,12 +114,40 @@
       "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
       "finalUrl": "https://deadsimplesites.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.266Z",
+      "fetchedAt": "2026-03-08T19:26:34.256Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 83,
+          "line": 97,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://delphi.tools/",
+      "normalizedUrl": "https://delphi.tools/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "delphitools",
+      "description": "A collection of small, low stakes and low effort tools. No logins, no registration, no data collection.",
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "delphi.tools",
+      "favicon": "https://delphi.tools/delphi-lowlod.png",
+      "finalUrl": "https://delphi.tools/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-08T19:26:33.846Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 135,
           "kind": "jsx_href",
           "label": null
         }
@@ -142,14 +170,203 @@
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.298Z",
+      "fetchedAt": "2026-03-08T19:26:33.929Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 98,
+          "line": 112,
           "kind": "jsx_href",
           "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://detail.design/detail/rich-previews-for-external-urls",
+      "normalizedUrl": "https://detail.design/detail/rich-previews-for-external-urls",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Convert external URLs to rich previews",
+      "description": null,
+      "image": "https://detail.design/en-US/detail/rich-previews-for-external-urls/opengraph-image-pc6iol?82a4b33c8b229d92",
+      "imageWidth": 1200,
+      "imageHeight": 630,
+      "imageAspectRatio": 1.9048,
+      "imageShape": "non_square",
+      "siteName": "Detail",
+      "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
+      "finalUrl": "https://detail.design/detail/rich-previews-for-external-urls",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-08T19:26:34.400Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 75,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "normalizedUrl": "https://example.local/",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.4.1.md",
+          "line": 15,
+          "kind": "markdown_inline",
+          "label": "Home"
+        }
+      ]
+    },
+    {
+      "url": "/blog",
+      "normalizedUrl": "https://example.local/blog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 9,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        },
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 18,
+          "kind": "markdown_inline",
+          "label": "Blog"
+        }
+      ]
+    },
+    {
+      "url": "/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "normalizedUrl": "https://example.local/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.2.0.md",
+          "line": 18,
+          "kind": "markdown_inline",
+          "label": "Lista de afazeres"
+        }
+      ]
+    },
+    {
+      "url": "/changelog",
+      "normalizedUrl": "https://example.local/changelog",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 5,
+          "kind": "markdown_inline",
+          "label": "Changelog"
+        }
+      ]
+    },
+    {
+      "url": "/videos",
+      "normalizedUrl": "https://example.local/videos",
+      "classification": "internal_app",
+      "status": "skipped",
+      "skipReason": "internal_link",
+      "title": null,
+      "description": null,
+      "image": null,
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": null,
+      "favicon": null,
+      "finalUrl": null,
+      "httpStatus": null,
+      "fetchedAt": null,
+      "error": {
+        "code": "unsupported_url",
+        "message": "internal_link"
+      },
+      "sourceRefs": [
+        {
+          "file": "src/data/changelog/v1.0.1.md",
+          "line": 5,
+          "kind": "markdown_inline",
+          "label": "Vídeos"
         }
       ]
     },
@@ -224,49 +441,6 @@
           "line": 19,
           "kind": "markdown_inline",
           "label": "Blog"
-        },
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 10,
-          "kind": "markdown_inline",
-          "label": "Blog"
-        },
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 19,
-          "kind": "markdown_inline",
-          "label": "Blog"
-        }
-      ]
-    },
-    {
-      "url": "/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
-      "normalizedUrl": "https://example.local/zweihander/blog/U2FsdGVkX18BN4Sch4PRgb1obNas3BsT",
-      "classification": "internal_app",
-      "status": "skipped",
-      "skipReason": "internal_link",
-      "title": null,
-      "description": null,
-      "image": null,
-      "imageWidth": null,
-      "imageHeight": null,
-      "imageAspectRatio": null,
-      "imageShape": null,
-      "siteName": null,
-      "favicon": null,
-      "finalUrl": null,
-      "httpStatus": null,
-      "fetchedAt": null,
-      "error": {
-        "code": "unsupported_url",
-        "message": "internal_link"
-      },
-      "sourceRefs": [
-        {
-          "file": "src/data/changelog/v1.2.0.md",
-          "line": 19,
-          "kind": "markdown_inline",
-          "label": "Lista de afazeres"
         }
       ]
     },
@@ -341,12 +515,6 @@
           "line": 23,
           "kind": "markdown_inline",
           "label": "Changelog"
-        },
-        {
-          "file": "src/data/changelog/v1.0.1.md",
-          "line": 1,
-          "kind": "markdown_inline",
-          "label": "Changelog"
         }
       ]
     },
@@ -378,12 +546,6 @@
           "line": 24,
           "kind": "markdown_inline",
           "label": "Vídeos"
-        },
-        {
-          "file": "src/data/changelog/v1.0.1.md",
-          "line": 1,
-          "kind": "markdown_inline",
-          "label": "Vídeos"
         }
       ]
     },
@@ -404,12 +566,12 @@
       "favicon": "https://filegarden.com/images/icon.svg",
       "finalUrl": "https://filegarden.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.425Z",
+      "fetchedAt": "2026-03-08T19:26:34.156Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 61,
+          "line": 64,
           "kind": "jsx_href",
           "label": null
         }
@@ -432,12 +594,12 @@
       "favicon": "https://gradienty.codes/favicon.ico",
       "finalUrl": "https://gradienty.codes/mesh-gradients",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.394Z",
+      "fetchedAt": "2026-03-08T19:26:34.557Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 45,
+          "line": 48,
           "kind": "jsx_href",
           "label": null
         }
@@ -460,7 +622,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.368Z",
+      "fetchedAt": "2026-03-08T19:26:34.348Z",
       "error": null,
       "sourceRefs": [
         {
@@ -488,7 +650,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-07T07:12:42.613Z",
+      "fetchedAt": "2026-03-08T19:26:34.565Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -519,7 +681,7 @@
       "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
       "finalUrl": "https://ui.glass/generator",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-07T07:12:42.576Z",
+      "fetchedAt": "2026-03-08T19:26:34.797Z",
       "error": null,
       "sourceRefs": [
         {

@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy: () => import("./v1.4.1.md?raw"),
   U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt: () => import("./v1.4.0.md?raw"),
   U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf: () => import("./v1.3.0.md?raw"),
   U2FsdGVkX19LcSnwbIxtZttdwANOphDY: () => import("./v1.2.1.md?raw"),
@@ -20,12 +21,20 @@ const contentCache = new Map();
 
 export const logs = [
   {
+    id: "U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy",
+    title: "ícones dinâmicos",
+    version: "changelog #14 - v1.4.1",
+    date: "07/03/2026",
+    description:
+      "Favicon agora acompanha o tema ativo e os textos dos changelogs foram padronizados.",
+  },
+  {
     id: "U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt",
-    title: "links de milhões",
+    title: "o link de milhões",
     version: "changelog #13 - v1.4.0",
     date: "07/03/2026",
     description:
-      "Implementação do Link Rich Preview com geração de metadados no prebuild.",
+      "Introduzido o sistema de preview de links.",
   },
   {
     id: "U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf",
@@ -49,7 +58,7 @@ export const logs = [
     version: "changelog #10 - v1.2.0",
     date: "03/03/2026",
     description:
-      "Mudanças buscando uma melhor performance com Route-based Code Splitting e Lazy Loading.",
+      "Melhorias de performance com route-based code splitting e lazy loading.",
   },
   {
     id: "U2FsdGVkX19UopSScWDJRvxRzh6ANhVP",
@@ -57,7 +66,7 @@ export const logs = [
     version: "changelog #9 - v1.1.0",
     date: "02/03/2026",
     description:
-      "Responsividade completamente revisada, correções de overflow e melhoria do comportamento do modal do changelog.",
+      "Responsividade revisada de ponta a ponta, correções de overflow e melhoria no comportamento do modal do changelog..",
   },
   {
     id: "U2FsdGVkX19tzGKO0yNYQPBK1tcNbrMc",
@@ -72,14 +81,14 @@ export const logs = [
     title: "Zweihander v1.0.0",
     version: "changelog #7 - v1.0.0",
     date: "28/02/2026",
-    description: "Primeira versão estável.",
+    description: "Primeira versão estável do projeto.",
   },
   {
     id: "U2FsdGVkX18im7TGDHSJXjcy4hvfLGIx",
     title: "refazendo changelog",
     version: "changelog #6 - v0.1.6",
     date: "27/02/2026",
-    description: "Changelog agora com modal.",
+    description: "Iniciada a refatoração do changelog com abertura de conteúdo em modal e consolidação de estilos Markdown.",
   },
   {
     id: "U2FsdGVkX18mm6OH9J4yRQSPr3ngvGGq",
@@ -87,7 +96,7 @@ export const logs = [
     version: "changelog #5 - v0.1.5",
     date: "25/02/2026",
     description:
-      "Adicionada a aba de bookmarks. Ainda não está 100% completa, mas tá lá.",
+      "Adicionada a aba de bookmarks.",
   },
   {
     id: "U2FsdGVkX198i7SJoWK9NIZA3hq9RrIv",

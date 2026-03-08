@@ -37,14 +37,14 @@
   padding-left: 5px;
 }
 
-i.fas:hover {
+#musicplayer i.fas:hover {
   cursor: pointer;
 }
 
-i.fas.fa-pause,
-i.fas.fa-play,
-i.fas.fa-forward,
-i.fas.fa-backward {
+#musicplayer i.fas.fa-pause,
+#musicplayer i.fas.fa-play,
+#musicplayer i.fas.fa-forward,
+#musicplayer i.fas.fa-backward {
   color: #fafafa;
 }
 
@@ -127,7 +127,7 @@ i.fas.fa-backward {
   }
 }
 
-input[type="range"] {
+#musicplayer input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -135,7 +135,7 @@ input[type="range"] {
   cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+#musicplayer input[type="range"]::-webkit-slider-runnable-track {
   height: 6px;
   border-radius: 999px;
   background: linear-gradient(
@@ -147,7 +147,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   );
 }
 
-input[type="range"]::-webkit-slider-thumb {
+#musicplayer input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px;
   width: 16px;
@@ -157,19 +157,19 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -5px;
 }
 
-input[type="range"]::-moz-range-track {
+#musicplayer input[type="range"]::-moz-range-track {
   height: 6px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.25);
 }
 
-input[type="range"]::-moz-range-progress {
+#musicplayer input[type="range"]::-moz-range-progress {
   height: 6px;
   border-radius: 999px;
   background: #ffffff;
 }
 
-input[type="range"]::-moz-range-thumb {
+#musicplayer input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;

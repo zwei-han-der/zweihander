@@ -14,8 +14,22 @@ function App() {
     const randomTheme = themes[Math.floor(Math.random() * themes.length)];
 
     Object.entries(randomTheme).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(`--${key}`, value);
+      if (key.startsWith("color")) {
+        document.documentElement.style.setProperty(`--${key}`, value);
+      }
     });
+
+    const faviconHref = randomTheme.favicon || "/favicon.svg";
+    let faviconEl = document.querySelector("link[rel='icon']");
+
+    if (!faviconEl) {
+      faviconEl = document.createElement("link");
+      faviconEl.setAttribute("rel", "icon");
+      faviconEl.setAttribute("type", "image/svg+xml");
+      document.head.appendChild(faviconEl);
+    }
+
+    faviconEl.setAttribute("href", faviconHref);
   }, []);
 
   return (

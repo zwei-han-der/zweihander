@@ -14,7 +14,11 @@ function Bookmarks() {
             <li>
               <h3>
                 <LinkPreview href="https://ui.glass/generator/">
-                  <a href="https://ui.glass/generator/" rel="noreferrer noopener">
+                  <a
+                    href="https://ui.glass/generator/"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
                     glass ui
                   </a>
                 </LinkPreview>
@@ -30,6 +34,7 @@ function Bookmarks() {
                   <a
                     href="https://codepen.io/jinsouls/pen/WNYRogj"
                     rel="noreferrer noopener"
+                    target="_blank"
                   >
                     adilene's music player
                   </a>
@@ -45,6 +50,7 @@ function Bookmarks() {
                   <a
                     href="https://gradienty.codes/mesh-gradients"
                     rel="noreferrer noopener"
+                    target="_blank"
                   >
                     gradienty
                   </a>
@@ -58,13 +64,34 @@ function Bookmarks() {
             <li>
               <h3>
                 <LinkPreview href="https://filegarden.com/">
-                  <a href="https://filegarden.com/" rel="noreferrer noopener">
+                  <a
+                    href="https://filegarden.com/"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
                     file garden
                   </a>
                 </LinkPreview>
                 :
               </h3>
               <span>Onde eu armazeno as músicas que tocam no player.</span>
+            </li>
+            <li>
+              <h3>
+                <LinkPreview href="https://detail.design/detail/rich-previews-for-external-urls">
+                  <a
+                    href="https://detail.design/detail/rich-previews-for-external-urls"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    Detail
+                  </a>
+                </LinkPreview>
+                :
+              </h3>
+              <span>
+                De onde eu tirei a ideia de adicionar os previews para os links.
+              </span>
             </li>
           </ul>
         </div>
@@ -105,7 +132,33 @@ function Bookmarks() {
                   </LinkPreview>
                   :
                 </h3>
-                <span>Inspiração sobre microinterações para aperfeiçoamento da experiência do usuário</span>
+                <span>
+                  Inspiração sobre microinterações para aperfeiçoamento da
+                  experiência do usuário
+                </span>
+              </li>
+            </ul>
+            <div className="bookmarks-subtopic-header">
+              <h2>Ferramentas</h2>
+            </div>
+            <ul>
+              <li>
+                <h3>
+                  <LinkPreview href="https://delphi.tools/">
+                    <a
+                      href="https://delphi.tools/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Delphi Tools
+                    </a>
+                  </LinkPreview>
+                  :
+                </h3>
+                <span>
+                  Uma coleção de ferramentas pequenas, de baixo custo e fácil
+                  utilização.
+                </span>
               </li>
             </ul>
           </div>
