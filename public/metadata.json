@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-08T19:26:34.797Z",
+  "generatedAt": "2026-03-11T18:24:12.589Z",
   "summary": {
-    "totalDiscovered": 27,
-    "uniqueUrls": 22,
-    "ok": 10,
+    "totalDiscovered": 29,
+    "uniqueUrls": 24,
+    "ok": 12,
     "failed": 2,
     "skipped": 10,
-    "durationMs": 1347
+    "durationMs": 4420
   },
   "links": [
     {
@@ -27,7 +27,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.240Z",
+      "fetchedAt": "2026-03-11T18:24:08.979Z",
       "error": null,
       "sourceRefs": [
         {
@@ -55,7 +55,7 @@
       "favicon": null,
       "finalUrl": "https://blackspace.lol/blog/markdown-showcase",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.244Z",
+      "fetchedAt": "2026-03-11T18:24:09.014Z",
       "error": null,
       "sourceRefs": [
         {
@@ -83,7 +83,7 @@
       "favicon": null,
       "finalUrl": "https://codepen.io/jinsouls/pen/WNYRogj",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-08T19:26:33.723Z",
+      "fetchedAt": "2026-03-11T18:24:08.433Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -91,7 +91,7 @@
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 33,
+          "line": 35,
           "kind": "jsx_href",
           "label": null
         }
@@ -114,12 +114,12 @@
       "favicon": "https://deadsimplesites.com/icon.png?885719fba83a84cd",
       "finalUrl": "https://deadsimplesites.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.256Z",
+      "fetchedAt": "2026-03-11T18:24:08.840Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 97,
+          "line": 113,
           "kind": "jsx_href",
           "label": null
         }
@@ -142,12 +142,12 @@
       "favicon": "https://delphi.tools/delphi-lowlod.png",
       "finalUrl": "https://delphi.tools/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:33.846Z",
+      "fetchedAt": "2026-03-11T18:24:08.545Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 135,
+          "line": 186,
           "kind": "jsx_href",
           "label": null
         }
@@ -170,12 +170,12 @@
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:33.929Z",
+      "fetchedAt": "2026-03-11T18:24:10.292Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 112,
+          "line": 128,
           "kind": "jsx_href",
           "label": null
         }
@@ -198,12 +198,12 @@
       "favicon": "https://detail.design/favicon.ico?favicon.35ea5d54.ico",
       "finalUrl": "https://detail.design/detail/rich-previews-for-external-urls",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.400Z",
+      "fetchedAt": "2026-03-11T18:24:10.748Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 75,
+          "line": 83,
           "kind": "jsx_href",
           "label": null
         }
@@ -566,12 +566,12 @@
       "favicon": "https://filegarden.com/images/icon.svg",
       "finalUrl": "https://filegarden.com/",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.156Z",
+      "fetchedAt": "2026-03-11T18:24:09.077Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 64,
+          "line": 68,
           "kind": "jsx_href",
           "label": null
         }
@@ -594,12 +594,12 @@
       "favicon": "https://gradienty.codes/favicon.ico",
       "finalUrl": "https://gradienty.codes/mesh-gradients",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.557Z",
+      "fetchedAt": "2026-03-11T18:24:09.778Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 48,
+          "line": 51,
           "kind": "jsx_href",
           "label": null
         }
@@ -622,7 +622,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.348Z",
+      "fetchedAt": "2026-03-11T18:24:09.114Z",
       "error": null,
       "sourceRefs": [
         {
@@ -650,7 +650,7 @@
       "favicon": null,
       "finalUrl": "https://i.pinimg.com/1200x/a7/61/fa/a761fa25c754f4691b52b65a3c24fd1c.jpg%20%22Imagem%20com%20title%22",
       "httpStatus": 403,
-      "fetchedAt": "2026-03-08T19:26:34.565Z",
+      "fetchedAt": "2026-03-11T18:24:09.307Z",
       "error": {
         "code": "http_error",
         "message": "HTTP status 403"
@@ -661,6 +661,62 @@
           "line": 46,
           "kind": "markdown_inline",
           "label": "Imagem"
+        }
+      ]
+    },
+    {
+      "url": "https://tympanus.net/codrops/hub/",
+      "normalizedUrl": "https://tympanus.net/codrops/hub/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Creative Hub | Codrops",
+      "description": "The Creative Hub is a growing showcase of open source web demos, design experiments, interactive concepts, and creative ideas. It highlights original work by Codrops contributors alongside standout projects from around the web.",
+      "image": "https://codrops-1f606.kxcdn.com/codrops/wp-content/uploads/2025/09/creativehub_cover.jpg?x82419",
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "Codrops",
+      "favicon": "https://codrops-1f606.kxcdn.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-96x96.png?x82419",
+      "finalUrl": "https://tympanus.net/codrops/hub/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-11T18:24:11.468Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 163,
+          "kind": "jsx_href",
+          "label": null
+        }
+      ]
+    },
+    {
+      "url": "https://tympanus.net/codrops/webzibition/",
+      "normalizedUrl": "https://tympanus.net/codrops/webzibition/",
+      "classification": "external_http",
+      "status": "ok",
+      "skipReason": null,
+      "title": "Webzibition - Freshly hand-picked websites for your inspiration.",
+      "description": "An exhibition of really great websites. Updated regularly.",
+      "image": "https://codrops-1f606.kxcdn.com/codrops/wp-content/uploads/2024/09/Webzibition.jpg?x82419",
+      "imageWidth": null,
+      "imageHeight": null,
+      "imageAspectRatio": null,
+      "imageShape": null,
+      "siteName": "tympanus.net",
+      "favicon": "https://codrops-1f606.kxcdn.com/codrops/wp-content/themes/codropstheme03/favicons/favicon-96x96.png?x82419",
+      "finalUrl": "https://tympanus.net/codrops/webzibition/",
+      "httpStatus": 200,
+      "fetchedAt": "2026-03-11T18:24:12.589Z",
+      "error": null,
+      "sourceRefs": [
+        {
+          "file": "src/pages/Bookmarks.jsx",
+          "line": 146,
+          "kind": "jsx_href",
+          "label": null
         }
       ]
     },
@@ -681,12 +737,12 @@
       "favicon": "https://ui.glass/favicon.ico?favicon.5b8bc097.ico",
       "finalUrl": "https://ui.glass/generator",
       "httpStatus": 200,
-      "fetchedAt": "2026-03-08T19:26:34.797Z",
+      "fetchedAt": "2026-03-11T18:24:11.001Z",
       "error": null,
       "sourceRefs": [
         {
           "file": "src/pages/Bookmarks.jsx",
-          "line": 17,
+          "line": 18,
           "kind": "jsx_href",
           "label": null
         }
