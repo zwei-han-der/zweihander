@@ -7,6 +7,7 @@ const Changelog = lazy(() => import("./pages/Changelog"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Videos = lazy(() => import("./pages/Videos"));
 const Bookmarks = lazy(() => import("./pages/Bookmarks"));
+const Gallery = lazy(() => import("./pages/Gallery"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           </Route>
           <Route path="/videos" element={<Videos />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </Suspense>

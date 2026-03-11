@@ -6,6 +6,7 @@ function Bookmarks() {
   return (
     <Standalone>
       <div className="bookmarks-content">
+        {/* === CRÉDITOS === */}
         <div className="bookmarks-topic">
           <div className="bookmarks-topic-header">
             <h2>Créditos</h2>
@@ -95,11 +96,13 @@ function Bookmarks() {
             </li>
           </ul>
         </div>
+        {/* === LINKS === */}
         <div className="bookmarks-topic">
           <div className="bookmarks-topic-header">
             <h2>Links úteis</h2>
           </div>
           <div className="bookmarks-subtopic">
+            {/* === iNSPIRAÇÃO === */}
             <div className="bookmarks-subtopic-header">
               <h2>Inspiração</h2>
             </div>
@@ -137,8 +140,43 @@ function Bookmarks() {
                   experiência do usuário
                 </span>
               </li>
+              <li>
+                <h3>
+                  <LinkPreview href="https://tympanus.net/codrops/webzibition/">
+                    <a
+                      href="https://tympanus.net/codrops/webzibition/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Webzibition
+                    </a>
+                  </LinkPreview>
+                  :
+                </h3>
+                <span>
+                  Inspiração para design de sites com curadoria própria
+                </span>
+              </li>
+              <li>
+                <h3>
+                  <LinkPreview href="https://tympanus.net/codrops/hub/">
+                    <a
+                      href="https://tympanus.net/codrops/hub/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Creative Hub
+                    </a>
+                  </LinkPreview>
+                  :
+                </h3>
+                <span>
+                  Inspiração para boas QoL funcionalidades 
+                </span>
+              </li>
             </ul>
             <div className="bookmarks-subtopic-header">
+              {/* === FERRAMENTAS === */}
               <h2>Ferramentas</h2>
             </div>
             <ul>
