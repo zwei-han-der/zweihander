@@ -1,0 +1,38 @@
+.ic-loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(12, 12, 12, 0.22), rgba(12, 12, 12, 0.22)),
+    transparent;
+  backdrop-filter: blur(10px) saturate(160%);
+  transition: opacity 0.5s ease-out;
+}
+
+.ic-loader-overlay--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ic-loader-overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ic-loader-bar {
+  width: 200px;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.ic-loader-bar-fill {
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  background-color: rgba(255, 255, 255, 0.8);
+}
