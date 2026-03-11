@@ -1,6 +1,7 @@
 // https://www.taqui.space/computacao/dados/texto-criptografado emanuelly TripleDES
 
 const changelogContentLoaders = {
+  U2FsdGVkX1N0fK6q8P1wY3rLs9TzMxQ: () => import("./v1.5.0.md?raw"),
   U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy: () => import("./v1.4.1.md?raw"),
   U2FsdGVkX18xC8xw3lQ6W7vKp2mN5dRt: () => import("./v1.4.0.md?raw"),
   U2FsdGVkX18rsRHeyQc42GEsOhDW5qHf: () => import("./v1.3.0.md?raw"),
@@ -20,6 +21,14 @@ const changelogContentLoaders = {
 const contentCache = new Map();
 
 export const logs = [
+  {
+    id: "U2FsdGVkX1N0fK6q8P1wY3rLs9TzMxQ",
+    title: "to infinity and beyond",
+    version: "changelog #15 - v1.5.0",
+    date: "11/03/2026",
+    description:
+      "Galeria em canvas infinito, expansão do blog e atualização dos links.",
+  },
   {
     id: "U2FsdGVkX1AqFvgP2nK7mLr8sQd9JtWy",
     title: "ícones dinâmicos",

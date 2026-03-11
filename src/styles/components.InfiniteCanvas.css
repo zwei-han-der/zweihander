@@ -1,0 +1,37 @@
+.ic-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+
+.ic-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  display: block;
+  background: transparent;
+}
+
+.ic-controls-panel {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  border-radius: 0.5rem;
+  background: rgba(24, 24, 24, 0.2);
+  padding: 0.6rem 1rem;
+  color: #fff;
+  font-size: 0.72rem;
+  font-family: ui-monospace, monospace;
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 4px 20px rgba(24, 24, 24, 0.2),
+    0 2px 12px rgba(0, 0, 0, 0.24);
+  pointer-events: none;
+  letter-spacing: 0.01em;
+}

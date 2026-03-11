@@ -5,7 +5,6 @@ Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que
 - Adicionar botão shuffle e possibilidade de reordenar a ordem das músicas que irão tocar
 - Adicionar algo de verdade na [Home](/zweihander/)
 - Adicionar aba Playground para projetos experimentais
-- Adicionar aba Galeria
 
 ## Em progresso
 
@@ -13,6 +12,7 @@ Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que
 
 ## Completo
 
+- Adicionado aba Galeria
 - Adicionado rich previews em links do site
 - Adicionado HTML parser no `MarkdownRenderer` com `rehype-raw`
 - Adicionada funcionalidade de sub rotas para [Changelog](/zweihander/changelog) e [Blog](/zweihander/blog) (`/zweihander/changelog/:logId)` e `/zweihander/blog/:postId)`)

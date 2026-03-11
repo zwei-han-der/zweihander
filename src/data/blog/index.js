@@ -2,9 +2,11 @@
 
 import demonmask from "../../assets/images/blog-covers/dayan-demon-mask.avif";
 import bath from "../../assets/images/blog-covers/dayan-bath.avif";
+import pink from "../../assets/images/blog-covers/pink-icon.avif";
 
 const blogContentLoaders = {
   U2FsdGVkX18BN4Sch4PRgb1obNas3BsT: () => import("./todo.md?raw"),
+  U2FsdGVkX19ek9PhLrkLyp1lGXKuTqa6: () => import("./pInk.md?raw"),
   U2FsdGVkX19V3tFiu7vvqN8JEZUHNRGbQLZGysuFl0dPxzbulAEPTQ: () => import("./markdown.md?raw"),
 };
 
@@ -19,6 +21,15 @@ export const posts = [
     description:
       "Aqui ficará arquivado tudo o que já foi feito, o que está sendo feito e o que será feito no site.",
     cover: demonmask,
+  },
+  {
+    id: "U2FsdGVkX19ek9PhLrkLyp1lGXKuTqa6",
+    title: "Arquivo pInk",
+    version: "",
+    date: "10/03/2026",
+    description:
+      "Aqui ficará arquivado o que eu devo terminar no ecossistema pInk.",
+    cover: pink,
   },
   {
     id: "U2FsdGVkX19V3tFiu7vvqN8JEZUHNRGbQLZGysuFl0dPxzbulAEPTQ",
